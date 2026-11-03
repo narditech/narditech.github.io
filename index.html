@@ -93,32 +93,55 @@
                     <span class="text-xl font-bold tracking-tight text-white flex items-center gap-1.5">
                         NARDI TECH <span class="text-cyan-400 text-xs px-1.5 py-0.5 rounded bg-cyan-950/80 border border-cyan-800/60 font-mono">LLC</span>
                     </span>
-                    <span class="block text-[11px] text-slate-400 font-mono tracking-wider uppercase">Systems & Deep-Tech Advisory</span>
+                    <span class="block text-[11px] text-slate-400 font-mono tracking-wider uppercase" data-i18n="nav_subtitle">Systems & Deep-Tech Advisory</span>
                 </div>
             </a>
 
             <!-- Desktop Nav -->
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
-                <a href="#solutions" class="hover:text-cyan-400 transition-colors">Core Solutions</a>
-                <a href="#track-record" class="hover:text-cyan-400 transition-colors">Track Record</a>
-                <a href="#architecture" class="hover:text-cyan-400 transition-colors">Tech Stack</a>
-                <a href="#leadership" class="hover:text-cyan-400 transition-colors">Leadership</a>
-                <a href="#contact" class="px-4 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-navy-900 font-semibold transition-all shadow-md shadow-cyan-500/20">
-                    Schedule Technical Review
+            <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-300">
+                <a href="#solutions" class="hover:text-cyan-400 transition-colors" data-i18n="nav_solutions">Core Solutions</a>
+                <a href="#track-record" class="hover:text-cyan-400 transition-colors" data-i18n="nav_track_record">Track Record</a>
+                <a href="#architecture" class="hover:text-cyan-400 transition-colors" data-i18n="nav_tech_stack">Tech Stack</a>
+                <a href="#leadership" class="hover:text-cyan-400 transition-colors" data-i18n="nav_leadership">Leadership</a>
+                
+                <!-- Language Selector Flags -->
+                <div class="flex items-center bg-navy-800/90 border border-white/10 rounded-lg px-2 py-1 space-x-1.5 shadow-inner">
+                    <button onclick="setLanguage('en')" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="English (US)">🇺🇸</button>
+                    <button onclick="setLanguage('pt')" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Português (Brasil)">🇧🇷</button>
+                    <button onclick="setLanguage('es')" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Español (Latinoamérica)">🇪🇸</button>
+                    <button onclick="setLanguage('de')" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Deutsch">🇩🇪</button>
+                    <button onclick="setLanguage('fr')" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Français">🇫🇷</button>
+                    <button onclick="setLanguage('et')" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Eesti">🇪🇪</button>
+                </div>
+
+                <a href="#contact" class="px-4 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-navy-900 font-semibold transition-all shadow-md shadow-cyan-500/20" data-i18n="nav_schedule">
+                    Schedule Review
                 </a>
             </nav>
 
-            <button id="mobileMenuBtn" class="md:hidden text-slate-300 hover:text-white text-xl p-2" aria-label="Toggle Menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <!-- Mobile Controls -->
+            <div class="flex items-center space-x-3 lg:hidden">
+                <div class="flex items-center bg-navy-800 border border-white/10 rounded-lg px-2 py-1 text-xs">
+                    <button onclick="setLanguage('en')" class="p-1">🇺🇸</button>
+                    <button onclick="setLanguage('pt')" class="p-1">🇧🇷</button>
+                    <button onclick="setLanguage('es')" class="p-1">🇪🇸</button>
+                    <button onclick="setLanguage('de')" class="p-1">🇩🇪</button>
+                    <button onclick="setLanguage('fr')" class="p-1">🇫🇷</button>
+                    <button onclick="setLanguage('et')" class="p-1">🇪🇪</button>
+                </div>
+                <button id="mobileMenuBtn" class="text-slate-300 hover:text-white text-xl p-2" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </div>
 
-        <div id="mobileMenu" class="hidden md:hidden px-6 pt-2 pb-6 space-y-3 bg-navy-900/95 border-b border-white/10">
-            <a href="#solutions" class="block py-2 text-slate-300 hover:text-cyan-400">Core Solutions</a>
-            <a href="#track-record" class="block py-2 text-slate-300 hover:text-cyan-400">Track Record</a>
-            <a href="#architecture" class="block py-2 text-slate-300 hover:text-cyan-400">Tech Stack</a>
-            <a href="#leadership" class="block py-2 text-slate-300 hover:text-cyan-400">Leadership</a>
-            <a href="#contact" class="block mt-4 text-center px-4 py-2.5 rounded-lg bg-cyan-500 text-navy-900 font-semibold">Schedule Technical Review</a>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden lg:hidden px-6 pt-2 pb-6 space-y-3 bg-navy-900/95 border-b border-white/10">
+            <a href="#solutions" class="block py-2 text-slate-300 hover:text-cyan-400" data-i18n="nav_solutions">Core Solutions</a>
+            <a href="#track-record" class="block py-2 text-slate-300 hover:text-cyan-400" data-i18n="nav_track_record">Track Record</a>
+            <a href="#architecture" class="block py-2 text-slate-300 hover:text-cyan-400" data-i18n="nav_tech_stack">Tech Stack</a>
+            <a href="#leadership" class="block py-2 text-slate-300 hover:text-cyan-400" data-i18n="nav_leadership">Leadership</a>
+            <a href="#contact" class="block mt-4 text-center px-4 py-2.5 rounded-lg bg-cyan-500 text-navy-900 font-semibold" data-i18n="nav_schedule">Schedule Review</a>
         </div>
     </header>
 
@@ -128,44 +151,44 @@
             <div class="max-w-4xl">
                 <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-800/40 text-cyan-300 text-xs font-mono uppercase tracking-widest mb-6">
                     <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-                    Mission-Critical Systems Architecture
+                    <span data-i18n="hero_badge">Mission-Critical Systems Architecture</span>
                 </div>
                 
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
-                    Engineering <span class="text-gradient">High-Throughput</span> Distributed Backends & Financial Infrastructure.
+                    <span data-i18n="hero_title_1">Engineering</span> <span class="text-gradient" data-i18n="hero_title_highlight">High-Throughput</span> <span data-i18n="hero_title_2">Distributed Backends & Financial Infrastructure.</span>
                 </h1>
                 
-                <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed mb-10 max-w-3xl">
-                    Nardi Tech LLC is a specialized engineering consultancy delivering systems architecture, low-latency transaction processing, and deep-tech algorithmic integration for enterprise financial institutions, security leaders, and high-concurrency platforms.
+                <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed mb-10 max-w-3xl" data-i18n="hero_desc">
+                    Nardi Tech LLC is a specialized engineering practice delivering systems architecture, low-latency transaction processing, and deep-tech algorithmic integration for enterprise financial institutions, security leaders, and high-concurrency cloud platforms.
                 </p>
 
                 <div class="flex flex-wrap items-center gap-4">
                     <a href="#contact" class="px-7 py-3.5 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-navy-900 font-bold text-sm tracking-wide transition-all shadow-lg shadow-cyan-500/25 flex items-center gap-2">
-                        <span>Retain Advisory Services</span>
+                        <span data-i18n="hero_cta_advisory">Retain Advisory Services</span>
                         <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
                     <a href="#track-record" class="px-7 py-3.5 rounded-lg glass-card hover:bg-slate-800/60 text-white font-medium text-sm tracking-wide transition-all flex items-center gap-2">
                         <i class="fa-solid fa-layer-group text-cyan-400"></i>
-                        <span>Explore Engagements</span>
+                        <span data-i18n="hero_cta_explore">Explore Engagements</span>
                     </a>
                 </div>
 
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-16 pt-12 border-t border-white/10 font-mono">
                     <div>
                         <div class="text-3xl font-extrabold text-white">11+</div>
-                        <div class="text-xs text-slate-400 mt-1 uppercase">Years Engineering Mastery</div>
+                        <div class="text-xs text-slate-400 mt-1 uppercase" data-i18n="stat_1">Years Engineering Mastery</div>
                     </div>
                     <div>
                         <div class="text-3xl font-extrabold text-cyan-400">&lt;50ms</div>
-                        <div class="text-xs text-slate-400 mt-1 uppercase">Sub-Second Processing</div>
+                        <div class="text-xs text-slate-400 mt-1 uppercase" data-i18n="stat_2">Sub-Second Endpoint Latency</div>
                     </div>
                     <div>
                         <div class="text-3xl font-extrabold text-white">99.99%</div>
-                        <div class="text-xs text-slate-400 mt-1 uppercase">Operational Resilience</div>
+                        <div class="text-xs text-slate-400 mt-1 uppercase" data-i18n="stat_3">Operational Resilience</div>
                     </div>
                     <div>
                         <div class="text-3xl font-extrabold text-cyan-400">Tier-1</div>
-                        <div class="text-xs text-slate-400 mt-1 uppercase">Capital Markets Depth</div>
+                        <div class="text-xs text-slate-400 mt-1 uppercase" data-i18n="stat_4">Capital Markets Depth</div>
                     </div>
                 </div>
             </div>
@@ -176,20 +199,21 @@
     <section id="solutions" class="py-24 border-t border-white/5 bg-navy-900/50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-2xl mb-16">
-                <h2 class="text-xs font-mono tracking-widest uppercase text-cyan-400 mb-2">Capabilities</h2>
-                <h3 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Architectural Engineering Capabilities</h3>
-                <p class="text-slate-400 mt-3">Delivering rigorous, high-concurrency systems built with formal craftsmanship and fault-tolerant patterns.</p>
+                <h2 class="text-xs font-mono tracking-widest uppercase text-cyan-400 mb-2" data-i18n="solutions_tag">Capabilities</h2>
+                <h3 class="text-3xl font-bold tracking-tight text-white sm:text-4xl" data-i18n="solutions_title">Architectural Engineering Capabilities</h3>
+                <p class="text-slate-400 mt-3" data-i18n="solutions_subtitle">Delivering rigorous, high-concurrency systems built with formal craftsmanship and fault-tolerant patterns.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
+                <!-- Solution 1 -->
                 <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-cyan-950/80 border border-cyan-800/50 flex items-center justify-center text-cyan-400 text-xl mb-6">
                             <i class="fa-solid fa-server"></i>
                         </div>
-                        <h4 class="text-xl font-bold text-white mb-3">Distributed Backend & Event Streaming</h4>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                            Architecting low-latency microservices handling multi-gigabyte ingestion feeds. Real-time event streaming pipelines with Apache Kafka and asynchronous database access patterns.
+                        <h4 class="text-xl font-bold text-white mb-3" data-i18n="card1_title">Distributed Backend & Event Streaming</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6" data-i18n="card1_desc">
+                            Architecting low-latency microservices handling multi-gigabyte ingestion feeds. Real-time event streaming pipelines with Apache Kafka and robust asynchronous database access patterns.
                         </p>
                     </div>
                     <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
@@ -200,14 +224,15 @@
                     </div>
                 </div>
 
+                <!-- Solution 2 -->
                 <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-cyan-950/80 border border-cyan-800/50 flex items-center justify-center text-cyan-400 text-xl mb-6">
                             <i class="fa-solid fa-chart-line"></i>
                         </div>
-                        <h4 class="text-xl font-bold text-white mb-3">Quantitative & Financial Systems</h4>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                            Core valuation logic, proxy voting policy engines, fixed income, FX, and derivatives validation with strict numeric data integrity, audit trails, and reconciliation.
+                        <h4 class="text-xl font-bold text-white mb-3" data-i18n="card2_title">Quantitative & Financial Systems</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6" data-i18n="card2_desc">
+                            Core valuation logic, proxy voting policy engines, fixed income, FX, and derivatives validation with strict numeric data integrity, audit trails, and automated reconciliation.
                         </p>
                     </div>
                     <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
@@ -218,260 +243,11 @@
                     </div>
                 </div>
 
+                <!-- Solution 3 -->
                 <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-cyan-950/80 border border-cyan-800/50 flex items-center justify-center text-cyan-400 text-xl mb-6">
                             <i class="fa-solid fa-atom"></i>
                         </div>
-                        <h4 class="text-xl font-bold text-white mb-3">Deep-Tech & Applied Optimization</h4>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                            Translating advanced algorithmic research into production. Combinatorial optimization, high-volume schema validation pipelines, and machine learning architectures.
-                        </p>
-                    </div>
-                    <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
-                        <span class="tech-pill">Optimization Algorithms</span>
-                        <span class="tech-pill">Autonomous Systems</span>
-                        <span class="tech-pill">Machine Learning</span>
-                        <span class="tech-pill">Pydantic v2</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Track Record / Selected Engagements -->
-    <section id="track-record" class="py-24 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="max-w-3xl mb-16">
-                <h2 class="text-xs font-mono tracking-widest uppercase text-cyan-400 mb-2">Proven Execution</h2>
-                <h3 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Selected Consulting & Engineering Engagements</h3>
-                <p class="text-slate-400 mt-3">Strategic technical leadership delivering results across institutional clients under stringent reliability agreements.</p>
-            </div>
-
-            <div class="space-y-6">
-                <div class="glass-card p-8 rounded-2xl">
-                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4">
-                        <div>
-                            <div class="inline-block px-2.5 py-1 rounded bg-blue-950/80 border border-blue-800/40 text-blue-300 text-xs font-mono mb-2">
-                                Tier-1 US Financial Technology Infrastructure
-                            </div>
-                            <h4 class="text-2xl font-bold text-white">Enterprise Proxy Voting & Policy Calculation Engine</h4>
-                        </div>
-                        <span class="text-xs font-mono text-cyan-400 bg-cyan-950/40 px-3 py-1.5 rounded-full border border-cyan-900/60 self-start lg:self-auto">
-                            NYSE Equity Shareholder Operations
-                        </span>
-                    </div>
-                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                        Architectural design and backend microservices delivery for the core proxy voting calculation platform executing institutional voting decisions across major US stock exchanges. Engineered high-throughput RESTful ingestion microservices handling complex XML, JSON, and voting metadata feeds with sub-50ms latency. Enforced zero-downtime CI/CD automation with SonarQube, Checkmarx, and CAST security quality gates.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-pill">Python (FastAPI/Flask)</span>
-                        <span class="tech-pill">Apache Kafka</span>
-                        <span class="tech-pill">PostgreSQL (asyncpg)</span>
-                        <span class="tech-pill">AWS (Lambda/S3/Boto3)</span>
-                        <span class="tech-pill">Jenkins & GitFlow</span>
-                        <span class="tech-pill">pytest (90%+ Coverage)</span>
-                    </div>
-                </div>
-
-                <div class="glass-card p-8 rounded-2xl">
-                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4">
-                        <div>
-                            <div class="inline-block px-2.5 py-1 rounded bg-slate-800 border border-slate-700 text-slate-300 text-xs font-mono mb-2">
-                                Global Markets Operations Technology (GMOT)
-                            </div>
-                            <h4 class="text-2xl font-bold text-white">Wholesale Banking Trading Desks (Derivatives, FX, Fixed Income)</h4>
-                        </div>
-                        <span class="text-xs font-mono text-slate-400 bg-slate-800/60 px-3 py-1.5 rounded-full self-start lg:self-auto">
-                            Tier-1 Investment Banking
-                        </span>
-                    </div>
-                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                        Led technical execution and engineered high-throughput calculation and trade verification APIs. Built reactive operations dashboards using React + TypeScript, enforcing numeric data precision, UTC standardization, and automated cross-ledger reconciliation with zero discrepancies.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-pill">.NET Core (C#)</span>
-                        <span class="tech-pill">Python</span>
-                        <span class="tech-pill">React + TypeScript</span>
-                        <span class="tech-pill">SQL Server & PostgreSQL</span>
-                        <span class="tech-pill">Clean Architecture</span>
-                    </div>
-                </div>
-
-                <div class="glass-card p-8 rounded-2xl">
-                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4">
-                        <div>
-                            <div class="inline-block px-2.5 py-1 rounded bg-emerald-950/80 border border-emerald-800/40 text-emerald-300 text-xs font-mono mb-2">
-                                Global Hardware Security & Logistics
-                            </div>
-                            <h4 class="text-2xl font-bold text-white">Hardware Key Telemetry & Supply Chain Microservices</h4>
-                        </div>
-                        <span class="text-xs font-mono text-emerald-400 bg-emerald-950/40 px-3 py-1.5 rounded-full border border-emerald-900/60 self-start lg:self-auto">
-                            International Authentication Leader
-                        </span>
-                    </div>
-                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                        Engineered low-latency backend microservices in Go and Python integrated with Azure Service Bus and PostgreSQL for real-time cryptographic key telemetry and international supply chain distribution monitoring.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-pill">Go (Golang)</span>
-                        <span class="tech-pill">Python</span>
-                        <span class="tech-pill">Azure Service Bus</span>
-                        <span class="tech-pill">React SPA</span>
-                        <span class="tech-pill">Docker & Azure DevOps</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technical Ecosystem / Architecture -->
-    <section id="architecture" class="py-24 border-t border-white/5 bg-navy-900/40">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="max-w-2xl mb-16">
-                <h2 class="text-xs font-mono tracking-widest uppercase text-cyan-400 mb-2">Technology Stack</h2>
-                <h3 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Hardened Engineering Arsenal</h3>
-                <p class="text-slate-400 mt-3">Proven languages, frameworks, and deployment platforms utilized across production releases.</p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="glass-card p-6 rounded-xl">
-                    <h5 class="text-sm font-mono uppercase text-cyan-400 mb-4 tracking-wider flex items-center gap-2">
-                        <i class="fa-solid fa-code"></i> Back-End Core
-                    </h5>
-                    <ul class="space-y-2 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Python (FastAPI, Flask)</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> C# (.NET Core 6/8)</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Go (Golang)</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Pydantic v2 & AsyncIO</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> lxml & XML Parsing</li>
-                    </ul>
-                </div>
-
-                <div class="glass-card p-6 rounded-xl">
-                    <h5 class="text-sm font-mono uppercase text-cyan-400 mb-4 tracking-wider flex items-center gap-2">
-                        <i class="fa-solid fa-database"></i> Data & Streaming
-                    </h5>
-                    <ul class="space-y-2 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> PostgreSQL (asyncpg/SQLAlchemy)</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Apache Kafka (confluent-kafka)</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Redis (Caching & Pub/Sub)</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Microsoft SQL Server</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Azure Service Bus</li>
-                    </ul>
-                </div>
-
-                <div class="glass-card p-6 rounded-xl">
-                    <h5 class="text-sm font-mono uppercase text-cyan-400 mb-4 tracking-wider flex items-center gap-2">
-                        <i class="fa-solid fa-cloud"></i> Cloud & Governance
-                    </h5>
-                    <ul class="space-y-2 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> AWS (ECS, Lambda, S3, RDS)</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Microsoft Azure</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Docker & Kubernetes</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> CI/CD (Jenkins, GitLab, Actions)</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> SAST (SonarQube, Checkmarx)</li>
-                    </ul>
-                </div>
-
-                <div class="glass-card p-6 rounded-xl">
-                    <h5 class="text-sm font-mono uppercase text-cyan-400 mb-4 tracking-wider flex items-center gap-2">
-                        <i class="fa-solid fa-desktop"></i> Front-End & Quality
-                    </h5>
-                    <ul class="space-y-2 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> React & TypeScript</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Angular</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Test-Driven Development (TDD)</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> pytest & xUnit</li>
-                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> PSPO I (Scrum.org Certified)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Leadership & Governance -->
-    <section id="leadership" class="py-24 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="glass-card p-10 lg:p-14 rounded-3xl border border-white/10 relative overflow-hidden">
-                <div class="max-w-3xl">
-                    <div class="inline-block px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-800/40 text-cyan-300 text-xs font-mono uppercase tracking-widest mb-4">
-                        Executive Engineering Leadership
-                    </div>
-                    <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">Francisco José Nardi Filho</h3>
-                    <p class="text-cyan-400 text-lg font-medium mb-6">Managing Partner & Principal Systems Architect</p>
-                    
-                    <p class="text-slate-300 text-base leading-relaxed mb-6">
-                        Senior Software Architect with over 11 years of experience in distributed systems, financial computing engines, and cloud-native solutions. Academic background includes a Master’s degree and Ph.D. Candidate status in Computer Science at UNICAMP (focusing on adaptive systems and machine learning optimization). Dual citizenship holder (European / Italian and Brazilian).
-                    </p>
-
-                    <div class="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400 pt-4 border-t border-white/10">
-                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-graduation-cap text-cyan-400"></i> M.Sc. & Ph.D. Candidate (UNICAMP)</span>
-                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-passport text-cyan-400"></i> EU & Brazilian Citizen</span>
-                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-award text-cyan-400"></i> ANBIMA CPA-20 Certified</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact CTA -->
-    <section id="contact" class="py-24 border-t border-white/5 bg-navy-900/60">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-xs font-mono tracking-widest uppercase text-cyan-400 mb-2">Corporate Inquiries</h2>
-            <h3 class="text-3xl sm:text-4xl font-bold text-white mb-6">Retain Nardi Tech for Technical Consulting</h3>
-            <p class="text-slate-300 text-base mb-10 max-w-2xl mx-auto">
-                Currently taking selected architecture advisory, backend modernization, and mission-critical engineering engagements.
-            </p>
-
-            <div class="glass-card p-8 rounded-2xl max-w-xl mx-auto flex flex-col sm:flex-row items-center justify-around gap-6">
-                <a href="mailto:fnardifilho@gmail.com" class="flex items-center gap-3 text-white hover:text-cyan-400 transition-colors group">
-                    <div class="w-12 h-12 rounded-lg bg-cyan-950 border border-cyan-800/40 flex items-center justify-center text-cyan-400 group-hover:scale-105 transition-transform">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
-                    <div class="text-left">
-                        <div class="text-xs text-slate-400 uppercase font-mono">Email Direct</div>
-                        <div class="text-sm font-semibold">fnardifilho@gmail.com</div>
-                    </div>
-                </a>
-
-                <div class="hidden sm:block w-px h-12 bg-white/10"></div>
-
-                <a href="https://linkedin.com/in/francisnardi" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-white hover:text-cyan-400 transition-colors group">
-                    <div class="w-12 h-12 rounded-lg bg-blue-950 border border-blue-800/40 flex items-center justify-center text-blue-400 group-hover:scale-105 transition-transform">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </div>
-                    <div class="text-left">
-                        <div class="text-xs text-slate-400 uppercase font-mono">Connect</div>
-                        <div class="text-sm font-semibold">Executive LinkedIn</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Professional Clean Footer -->
-    <footer class="py-12 border-t border-white/10 bg-navy-900 text-slate-400 text-xs">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="text-center md:text-left">
-                <div class="text-white font-bold text-sm tracking-wide">NARDI TECH LLC</div>
-                <div class="text-slate-400 mt-1">
-                    Registered in Wyoming, United States &bull; Principal Office: 30 N Gould St Ste N, Sheridan, WY 82801
-                </div>
-            </div>
-
-            <div class="text-center md:text-right text-slate-400">
-                &copy; 2026 Nardi Tech LLC. All rights reserved.
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const menuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
-</body>
-</html>
+                        <h4 class="text-xl font-bold text-white mb-3" data-i18n="card3_title">Deep-Tech & Applied Optimization</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed
