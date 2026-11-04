@@ -98,20 +98,20 @@
             </a>
 
             <!-- Desktop Nav -->
-            <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-300">
+            <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-slate-300">
                 <a href="#solutions" class="hover:text-cyan-400 transition-colors" data-i18n="nav_solutions">Core Solutions</a>
                 <a href="#track-record" class="hover:text-cyan-400 transition-colors" data-i18n="nav_track_record">Track Record</a>
                 <a href="#architecture" class="hover:text-cyan-400 transition-colors" data-i18n="nav_tech_stack">Tech Stack</a>
                 <a href="#leadership" class="hover:text-cyan-400 transition-colors" data-i18n="nav_leadership">Leadership</a>
                 
-                <!-- Language Selector Flags -->
+                <!-- Desktop Language Flags -->
                 <div class="flex items-center bg-navy-800/90 border border-white/10 rounded-lg px-2 py-1 space-x-1.5 shadow-inner">
-                    <button onclick="setLanguage('en')" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="English (US)">🇺🇸</button>
-                    <button onclick="setLanguage('pt')" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Português (Brasil)">🇧🇷</button>
-                    <button onclick="setLanguage('es')" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Español (Latinoamérica)">🇪🇸</button>
-                    <button onclick="setLanguage('de')" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Deutsch">🇩🇪</button>
-                    <button onclick="setLanguage('fr')" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Français">🇫🇷</button>
-                    <button onclick="setLanguage('et')" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Eesti">🇪🇪</button>
+                    <button type="button" data-lang="en" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="English (US)">🇺🇸</button>
+                    <button type="button" data-lang="pt" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Português (Brasil)">🇧🇷</button>
+                    <button type="button" data-lang="es" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Español (Latinoamérica)">🇪🇸</button>
+                    <button type="button" data-lang="de" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Deutsch">🇩🇪</button>
+                    <button type="button" data-lang="fr" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Français">🇫🇷</button>
+                    <button type="button" data-lang="et" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Eesti">🇪🇪</button>
                 </div>
 
                 <a href="#contact" class="px-4 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-navy-900 font-semibold transition-all shadow-md shadow-cyan-500/20" data-i18n="nav_schedule">
@@ -119,17 +119,17 @@
                 </a>
             </nav>
 
-            <!-- Mobile Controls -->
-            <div class="flex items-center space-x-3 lg:hidden">
-                <div class="flex items-center bg-navy-800 border border-white/10 rounded-lg px-2 py-1 text-xs">
-                    <button onclick="setLanguage('en')" class="p-1">🇺🇸</button>
-                    <button onclick="setLanguage('pt')" class="p-1">🇧🇷</button>
-                    <button onclick="setLanguage('es')" class="p-1">🇪🇸</button>
-                    <button onclick="setLanguage('de')" class="p-1">🇩🇪</button>
-                    <button onclick="setLanguage('fr')" class="p-1">🇫🇷</button>
-                    <button onclick="setLanguage('et')" class="p-1">🇪🇪</button>
+            <!-- Mobile Flags & Menu Toggle -->
+            <div class="flex items-center space-x-2 lg:hidden">
+                <div class="flex items-center bg-navy-800 border border-white/10 rounded-lg px-1.5 py-1 text-xs">
+                    <button type="button" data-lang="en" class="lang-btn p-1">🇺🇸</button>
+                    <button type="button" data-lang="pt" class="lang-btn p-1">🇧🇷</button>
+                    <button type="button" data-lang="es" class="lang-btn p-1">🇪🇸</button>
+                    <button type="button" data-lang="de" class="lang-btn p-1">🇩🇪</button>
+                    <button type="button" data-lang="fr" class="lang-btn p-1">🇫🇷</button>
+                    <button type="button" data-lang="et" class="lang-btn p-1">🇪🇪</button>
                 </div>
-                <button id="mobileMenuBtn" class="text-slate-300 hover:text-white text-xl p-2" aria-label="Toggle Menu">
+                <button id="mobileMenuBtn" type="button" class="text-slate-300 hover:text-white text-xl p-2" aria-label="Toggle Menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
@@ -250,4 +250,695 @@
                             <i class="fa-solid fa-atom"></i>
                         </div>
                         <h4 class="text-xl font-bold text-white mb-3" data-i18n="card3_title">Deep-Tech & Applied Optimization</h4>
-                        <p class="text-slate-300 text-sm leading-relaxed
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6" data-i18n="card3_desc">
+                            Translating advanced algorithmic research into production. Combinatorial optimization, high-volume schema validation pipelines, and machine learning architectures.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+                        <span class="tech-pill">Optimization Algorithms</span>
+                        <span class="tech-pill">Autonomous Systems</span>
+                        <span class="tech-pill">Machine Learning</span>
+                        <span class="tech-pill">Pydantic v2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track Record / Selected Engagements -->
+    <section id="track-record" class="py-24 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl mb-16">
+                <h2 class="text-xs font-mono tracking-widest uppercase text-cyan-400 mb-2" data-i18n="track_tag">Proven Execution</h2>
+                <h3 class="text-3xl font-bold tracking-tight text-white sm:text-4xl" data-i18n="track_title">Selected Consulting & Engineering Engagements</h3>
+                <p class="text-slate-400 mt-3" data-i18n="track_subtitle">Strategic technical leadership delivering results across institutional clients under stringent reliability agreements.</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Case 1 -->
+                <div class="glass-card p-8 rounded-2xl">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4">
+                        <div>
+                            <div class="inline-block px-2.5 py-1 rounded bg-blue-950/80 border border-blue-800/40 text-blue-300 text-xs font-mono mb-2" data-i18n="case1_badge">
+                                Tier-1 US Financial Technology Infrastructure
+                            </div>
+                            <h4 class="text-2xl font-bold text-white" data-i18n="case1_title">Enterprise Proxy Voting & Policy Calculation Engine</h4>
+                        </div>
+                        <span class="text-xs font-mono text-cyan-400 bg-cyan-950/40 px-3 py-1.5 rounded-full border border-cyan-900/60 self-start lg:self-auto" data-i18n="case1_market">
+                            NYSE Equity Shareholder Operations
+                        </span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6" data-i18n="case1_desc">
+                        Architectural design and backend microservices delivery for the core proxy voting calculation platform executing institutional voting decisions across major US stock exchanges. Engineered high-throughput RESTful ingestion microservices handling complex XML, JSON, and voting metadata feeds with sub-50ms latency. Enforced zero-downtime CI/CD automation with SonarQube, Checkmarx, and CAST security quality gates.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-pill">Python (FastAPI/Flask)</span>
+                        <span class="tech-pill">Apache Kafka</span>
+                        <span class="tech-pill">PostgreSQL (asyncpg)</span>
+                        <span class="tech-pill">AWS (Lambda/S3/Boto3)</span>
+                        <span class="tech-pill">Jenkins & GitFlow</span>
+                        <span class="tech-pill">pytest (90%+ Coverage)</span>
+                    </div>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="glass-card p-8 rounded-2xl">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4">
+                        <div>
+                            <div class="inline-block px-2.5 py-1 rounded bg-slate-800 border border-slate-700 text-slate-300 text-xs font-mono mb-2" data-i18n="case2_badge">
+                                Global Markets Operations Technology (GMOT)
+                            </div>
+                            <h4 class="text-2xl font-bold text-white" data-i18n="case2_title">Wholesale Banking Trading Desks (Derivatives, FX, Fixed Income)</h4>
+                        </div>
+                        <span class="text-xs font-mono text-slate-400 bg-slate-800/60 px-3 py-1.5 rounded-full self-start lg:self-auto" data-i18n="case2_market">
+                            Tier-1 Investment Banking
+                        </span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6" data-i18n="case2_desc">
+                        Led technical execution and engineered high-throughput calculation and trade verification APIs. Built reactive operations dashboards using React + TypeScript, enforcing numeric data precision, UTC standardization, and automated cross-ledger reconciliation with zero discrepancies.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-pill">.NET Core (C#)</span>
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">React + TypeScript</span>
+                        <span class="tech-pill">SQL Server & PostgreSQL</span>
+                        <span class="tech-pill">Clean Architecture</span>
+                    </div>
+                </div>
+
+                <!-- Case 3 -->
+                <div class="glass-card p-8 rounded-2xl">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4">
+                        <div>
+                            <div class="inline-block px-2.5 py-1 rounded bg-emerald-950/80 border border-emerald-800/40 text-emerald-300 text-xs font-mono mb-2" data-i18n="case3_badge">
+                                Global Hardware Security & Logistics
+                            </div>
+                            <h4 class="text-2xl font-bold text-white" data-i18n="case3_title">Hardware Key Telemetry & Supply Chain Microservices</h4>
+                        </div>
+                        <span class="text-xs font-mono text-emerald-400 bg-emerald-950/40 px-3 py-1.5 rounded-full border border-emerald-900/60 self-start lg:self-auto" data-i18n="case3_market">
+                            International Authentication Leader
+                        </span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6" data-i18n="case3_desc">
+                        Engineered low-latency backend microservices in Go and Python integrated with Azure Service Bus and PostgreSQL for real-time cryptographic key telemetry and international supply chain distribution monitoring.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-pill">Go (Golang)</span>
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">Azure Service Bus</span>
+                        <span class="tech-pill">React SPA</span>
+                        <span class="tech-pill">Docker & Azure DevOps</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Ecosystem / Architecture -->
+    <section id="architecture" class="py-24 border-t border-white/5 bg-navy-900/40">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-2xl mb-16">
+                <h2 class="text-xs font-mono tracking-widest uppercase text-cyan-400 mb-2" data-i18n="stack_tag">Technology Stack</h2>
+                <h3 class="text-3xl font-bold tracking-tight text-white sm:text-4xl" data-i18n="stack_title">Hardened Engineering Arsenal</h3>
+                <p class="text-slate-400 mt-3" data-i18n="stack_subtitle">Proven languages, frameworks, and deployment platforms utilized across production releases.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-xl">
+                    <h5 class="text-sm font-mono uppercase text-cyan-400 mb-4 tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-code"></i> <span data-i18n="stack_col1">Back-End Core</span>
+                    </h5>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Python (FastAPI, Flask)</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> C# (.NET Core 6/8)</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Go (Golang)</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Pydantic v2 & AsyncIO</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> lxml & XML Parsing</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl">
+                    <h5 class="text-sm font-mono uppercase text-cyan-400 mb-4 tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-database"></i> <span data-i18n="stack_col2">Data & Streaming</span>
+                    </h5>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> PostgreSQL (asyncpg)</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Apache Kafka</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Redis (Caching & Pub/Sub)</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Microsoft SQL Server</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Azure Service Bus</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl">
+                    <h5 class="text-sm font-mono uppercase text-cyan-400 mb-4 tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-cloud"></i> <span data-i18n="stack_col3">Cloud & Governance</span>
+                    </h5>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> AWS (ECS, Lambda, S3, RDS)</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Microsoft Azure</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Docker & Kubernetes</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> CI/CD (Jenkins, GitLab, Actions)</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> SAST (SonarQube, Checkmarx)</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl">
+                    <h5 class="text-sm font-mono uppercase text-cyan-400 mb-4 tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-desktop"></i> <span data-i18n="stack_col4">Front-End & Quality</span>
+                    </h5>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> React & TypeScript</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Angular</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> TDD Methodology</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> pytest & xUnit</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> PSPO I (Scrum.org Certified)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership & Governance -->
+    <section id="leadership" class="py-24 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="glass-card p-10 lg:p-14 rounded-3xl border border-white/10 relative overflow-hidden">
+                <div class="max-w-3xl">
+                    <div class="inline-block px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-800/40 text-cyan-300 text-xs font-mono uppercase tracking-widest mb-4" data-i18n="lead_badge">
+                        Executive Engineering Leadership
+                    </div>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">Francisco José Nardi Filho</h3>
+                    <p class="text-cyan-400 text-lg font-medium mb-6" data-i18n="lead_role">Managing Partner & Principal Systems Architect</p>
+                    
+                    <p class="text-slate-300 text-base leading-relaxed mb-6" data-i18n="lead_bio">
+                        Senior Software Architect with over 11 years of experience in distributed systems, financial computing engines, and cloud-native solutions. Academic background includes a Master’s degree and Ph.D. Candidate status in Computer Science at UNICAMP (focusing on adaptive systems and machine learning optimization). Dual citizenship holder (European / Italian and Brazilian).
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400 pt-4 border-t border-white/10">
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-graduation-cap text-cyan-400"></i> <span data-i18n="lead_cred1">M.Sc. & Ph.D. Candidate (UNICAMP)</span></span>
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-passport text-cyan-400"></i> <span data-i18n="lead_cred2">EU & Brazilian Citizen</span></span>
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-award text-cyan-400"></i> <span data-i18n="lead_cred3">ANBIMA CPA-20 Certified</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contact" class="py-24 border-t border-white/5 bg-navy-900/60">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-xs font-mono tracking-widest uppercase text-cyan-400 mb-2" data-i18n="contact_tag">Corporate Inquiries</h2>
+            <h3 class="text-3xl sm:text-4xl font-bold text-white mb-6" data-i18n="contact_title">Retain Nardi Tech for Technical Consulting</h3>
+            <p class="text-slate-300 text-base mb-10 max-w-2xl mx-auto" data-i18n="contact_subtitle">
+                Currently taking selected architecture advisory, backend modernization, and mission-critical engineering engagements.
+            </p>
+
+            <div class="glass-card p-8 rounded-2xl max-w-xl mx-auto flex flex-col sm:flex-row items-center justify-around gap-6">
+                <a href="mailto:fnardifilho@gmail.com" class="flex items-center gap-3 text-white hover:text-cyan-400 transition-colors group">
+                    <div class="w-12 h-12 rounded-lg bg-cyan-950 border border-cyan-800/40 flex items-center justify-center text-cyan-400 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-xs text-slate-400 uppercase font-mono" data-i18n="contact_email_label">Email Direct</div>
+                        <div class="text-sm font-semibold">fnardifilho@gmail.com</div>
+                    </div>
+                </a>
+
+                <div class="hidden sm:block w-px h-12 bg-white/10"></div>
+
+                <a href="https://linkedin.com/in/francisnardi" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-white hover:text-cyan-400 transition-colors group">
+                    <div class="w-12 h-12 rounded-lg bg-blue-950 border border-blue-800/40 flex items-center justify-center text-blue-400 group-hover:scale-105 transition-transform">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-xs text-slate-400 uppercase font-mono" data-i18n="contact_social_label">Connect</div>
+                        <div class="text-sm font-semibold" data-i18n="contact_social_val">Executive LinkedIn</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Clean Footer -->
+    <footer class="py-12 border-t border-white/10 bg-navy-900 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-center md:text-left">
+                <div class="text-white font-bold text-sm tracking-wide">NARDI TECH LLC</div>
+                <div class="text-slate-400 mt-1" data-i18n="footer_legal">
+                    Registered in Wyoming, United States &bull; Principal Office: 30 N Gould St Ste N, Sheridan, WY 82801
+                </div>
+            </div>
+
+            <div class="text-center md:text-right text-slate-400" data-i18n="footer_copy">
+                &copy; 2026 Nardi Tech LLC. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Multilingual i18n Dictionary & Event Listener Script -->
+    <script>
+        const translations = {
+            en: {
+                nav_subtitle: "Systems & Deep-Tech Advisory",
+                nav_solutions: "Core Solutions",
+                nav_track_record: "Track Record",
+                nav_tech_stack: "Tech Stack",
+                nav_leadership: "Leadership",
+                nav_schedule: "Schedule Review",
+                hero_badge: "Mission-Critical Systems Architecture",
+                hero_title_1: "Engineering",
+                hero_title_highlight: "High-Throughput",
+                hero_title_2: "Distributed Backends & Financial Infrastructure.",
+                hero_desc: "Nardi Tech LLC is a specialized engineering practice delivering systems architecture, low-latency transaction processing, and deep-tech algorithmic integration for enterprise financial institutions, security leaders, and high-concurrency cloud platforms.",
+                hero_cta_advisory: "Retain Advisory Services",
+                hero_cta_explore: "Explore Engagements",
+                stat_1: "Years Engineering Mastery",
+                stat_2: "Sub-Second Endpoint Latency",
+                stat_3: "Operational Resilience",
+                stat_4: "Capital Markets Depth",
+                solutions_tag: "Capabilities",
+                solutions_title: "Architectural Engineering Capabilities",
+                solutions_subtitle: "Delivering rigorous, high-concurrency systems built with formal craftsmanship and fault-tolerant patterns.",
+                card1_title: "Distributed Backend & Event Streaming",
+                card1_desc: "Architecting low-latency microservices handling multi-gigabyte ingestion feeds. Real-time event streaming pipelines with Apache Kafka and robust asynchronous database access patterns.",
+                card2_title: "Quantitative & Financial Systems",
+                card2_desc: "Core valuation logic, proxy voting policy engines, fixed income, FX, and derivatives validation with strict numeric data integrity, audit trails, and automated reconciliation.",
+                card3_title: "Deep-Tech & Applied Optimization",
+                card3_desc: "Translating advanced algorithmic research into production. Combinatorial optimization, high-volume schema validation pipelines, and machine learning architectures.",
+                track_tag: "Proven Execution",
+                track_title: "Selected Consulting & Engineering Engagements",
+                track_subtitle: "Strategic technical leadership delivering results across institutional clients under stringent reliability agreements.",
+                case1_badge: "Tier-1 US Financial Technology Infrastructure",
+                case1_title: "Enterprise Proxy Voting & Policy Calculation Engine",
+                case1_market: "NYSE Equity Shareholder Operations",
+                case1_desc: "Architectural design and backend microservices delivery for the core proxy voting calculation platform executing institutional voting decisions across major US stock exchanges. Engineered high-throughput RESTful ingestion microservices handling complex XML, JSON, and voting metadata feeds with sub-50ms latency. Enforced zero-downtime CI/CD automation with SonarQube, Checkmarx, and CAST security quality gates.",
+                case2_badge: "Global Markets Operations Technology (GMOT)",
+                case2_title: "Wholesale Banking Trading Desks (Derivatives, FX, Fixed Income)",
+                case2_market: "Tier-1 Investment Banking",
+                case2_desc: "Led technical execution and engineered high-throughput calculation and trade verification APIs. Built reactive operations dashboards using React + TypeScript, enforcing numeric data precision, UTC standardization, and automated cross-ledger reconciliation with zero discrepancies.",
+                case3_badge: "Global Hardware Security & Logistics",
+                case3_title: "Hardware Key Telemetry & Supply Chain Microservices",
+                case3_market: "International Authentication Leader",
+                case3_desc: "Engineered low-latency backend microservices in Go and Python integrated with Azure Service Bus and PostgreSQL for real-time cryptographic key telemetry and international supply chain distribution monitoring.",
+                stack_tag: "Technology Stack",
+                stack_title: "Hardened Engineering Arsenal",
+                stack_subtitle: "Proven languages, frameworks, and deployment platforms utilized across production releases.",
+                stack_col1: "Back-End Core",
+                stack_col2: "Data & Streaming",
+                stack_col3: "Cloud & Governance",
+                stack_col4: "Front-End & Quality",
+                lead_badge: "Executive Engineering Leadership",
+                lead_role: "Managing Partner & Principal Systems Architect",
+                lead_bio: "Senior Software Architect with over 11 years of experience in distributed systems, financial computing engines, and cloud-native solutions. Academic background includes a Master’s degree and Ph.D. Candidate status in Computer Science at UNICAMP (focusing on adaptive systems and machine learning optimization). Dual citizenship holder (European / Italian and Brazilian).",
+                lead_cred1: "M.Sc. & Ph.D. Candidate (UNICAMP)",
+                lead_cred2: "EU & Brazilian Citizen",
+                lead_cred3: "ANBIMA CPA-20 Certified",
+                contact_tag: "Corporate Inquiries",
+                contact_title: "Retain Nardi Tech for Technical Consulting",
+                contact_subtitle: "Currently taking selected architecture advisory, backend modernization, and mission-critical engineering engagements.",
+                contact_email_label: "Email Direct",
+                contact_social_label: "Connect",
+                contact_social_val: "Executive LinkedIn",
+                footer_legal: "Registered in Wyoming, United States • Principal Office: 30 N Gould St Ste N, Sheridan, WY 82801",
+                footer_copy: "© 2026 Nardi Tech LLC. All rights reserved."
+            },
+            pt: {
+                nav_subtitle: "Consultoria em Sistemas e Deep-Tech",
+                nav_solutions: "Soluções Principais",
+                nav_track_record: "Projetos e Casos",
+                nav_tech_stack: "Stack Tecnológica",
+                nav_leadership: "Liderança",
+                nav_schedule: "Agendar Revisão",
+                hero_badge: "Arquitetura de Sistemas de Missão Crítica",
+                hero_title_1: "Engenharia de",
+                hero_title_highlight: "Alto Throughput",
+                hero_title_2: "para Backends Distribuídos e Mercado Financeiro.",
+                hero_desc: "A Nardi Tech LLC é uma consultoria de engenharia especializada em arquitetura de sistemas, processamento de baixa latência e integração algorítmica profunda para instituições financeiras, líderes de segurança e plataformas corporativas na nuvem.",
+                hero_cta_advisory: "Contratar Consultoria",
+                hero_cta_explore: "Explorar Projetos",
+                stat_1: "Anos de Experiência em Engenharia",
+                stat_2: "Latência Inferior a 50ms",
+                stat_3: "Resiliência Operacional",
+                stat_4: "Mercado de Capitais Tier-1",
+                solutions_tag: "Capacidades",
+                solutions_title: "Especialidades de Arquitetura e Engenharia",
+                solutions_subtitle: "Desenvolvimento de sistemas rigorosos e tolerantes a falhas sob os mais altos padrões de artesanato de software.",
+                card1_title: "Back-End Distribuído e Streaming de Eventos",
+                card1_desc: "Arquitetura de microsserviços de baixa latência para ingestão contínua em larga escala. Pipelines em tempo real com Apache Kafka e padrões assíncronos no banco de dados.",
+                card2_title: "Sistemas Quantitativos e Financeiros",
+                card2_desc: "Engenhos de precificação, motores de regras para votação por procuração, renda fixa, câmbio (FX) e derivativos com validação numérica estrita, trilhas de auditoria e conciliação contábil.",
+                card3_title: "Deep-Tech e Otimização Aplicada",
+                card3_desc: "Transformando pesquisa algorítmica avançada em produtos de produção estáveis. Otimização combinatória, pipelines de validação massiva de esquemas e inteligência artificial.",
+                track_tag: "Histórico Comprovado",
+                track_title: "Projetos Institucionais Selecionados",
+                track_subtitle: "Liderança técnica e entrega de valor em clientes globais sob rigorosos acordos de nível de serviço (SLA).",
+                case1_badge: "Infraestrutura de FinTech Tier-1 nos EUA",
+                case1_title: "Motor de Cálculo de Políticas de Voto por Procuração",
+                case1_market: "Operações de Acionistas na NYSE",
+                case1_desc: "Desenho arquitetural e entrega de microsserviços para o motor de proxy voting institucional nas maiores bolsas norte-americanas. Microsserviços RESTful de ingestão em Python (FastAPI/Flask) processando feeds de XML e JSON com latência sub-50ms e esteira de CI/CD blindada por SonarQube e Checkmarx.",
+                case2_badge: "Global Markets Operations Technology (GMOT)",
+                case2_title: "Mesas de Operação Bancária (Derivativos, FX, Renda Fixa)",
+                case2_market: "Banco de Investimento Global Tier-1",
+                case2_desc: "Liderança técnica em APIs de cálculo e verificação de ordens em C# .NET Core e Python, com painéis reativos em React + TypeScript, padronização de fusos em UTC e conciliação contábil automatizada com zero discrepâncias.",
+                case3_badge: "Segurança de Hardware e Logística Global",
+                case3_title: "Microsserviços de Telemetria e Cadeia de Suprimentos",
+                case3_market: "Líder Global em Autenticação Criptográfica",
+                case3_desc: "Construção de microsserviços de telemetria e rastreamento em Go e Python integrados ao Azure Service Bus e PostgreSQL para monitoramento logístico e entrega segura de chaves criptográficas em escala mundial.",
+                stack_tag: "Arsenal Técnico",
+                stack_title: "Tecnologias Homologadas em Produção",
+                stack_subtitle: "Linguagens, bancos de dados e ferramentas de computação em nuvem consolidadas.",
+                stack_col1: "Back-End Core",
+                stack_col2: "Dados e Mensageria",
+                stack_col3: "Nuvem e Governança",
+                stack_col4: "Front-End e Qualidade",
+                lead_badge: "Liderança Técnica Executiva",
+                lead_role: "Sócio Administrador e Arquiteto Principal de Sistemas",
+                lead_bio: "Arquiteto de Software Sênior com mais de 11 anos de experiência em sistemas distribuídos, esteiras financeiras de alto volume e nuvem. Mestre e Doutorando em Ciência da Computação pela UNICAMP (sistemas adaptativos e otimização por machine learning). Cidadão ítalo-brasileiro.",
+                lead_cred1: "Mestre e Doutorando (UNICAMP)",
+                lead_cred2: "Cidadão da União Europeia e Brasileiro",
+                lead_cred3: "Certificação CPA-20 (ANBIMA)",
+                contact_tag: "Contato Institucional",
+                contact_title: "Contrate a Consultoria Especializada da Nardi Tech",
+                contact_subtitle: "Disponível para contratos selecionados de modernização de sistemas legados, arquitetura de software e governança técnica.",
+                contact_email_label: "E-mail Corporativo",
+                contact_social_label: "Conectar",
+                contact_social_val: "LinkedIn Executivo",
+                footer_legal: "Registrada em Wyoming, Estados Unidos • Escritório Principal: 30 N Gould St Ste N, Sheridan, WY 82801",
+                footer_copy: "© 2026 Nardi Tech LLC. Todos os direitos reservados."
+            },
+            es: {
+                nav_subtitle: "Consultoría en Sistemas y Deep-Tech",
+                nav_solutions: "Soluciones",
+                nav_track_record: "Experiencia",
+                nav_tech_stack: "Tecnologías",
+                nav_leadership: "Liderazgo",
+                nav_schedule: "Agendar Revisión",
+                hero_badge: "Arquitectura de Sistemas de Misión Crítica",
+                hero_title_1: "Ingeniería de",
+                hero_title_highlight: "Alto Rendimiento",
+                hero_title_2: "para Backends Distribuidos e Infraestructura Financiera.",
+                hero_desc: "Nardi Tech LLC es una consultoría de ingeniería especializada en arquitectura de software, procesamiento transaccional de baja latencia e integración algorítmica para instituciones financieras, líderes de ciberseguridad y plataformas en la nube.",
+                hero_cta_advisory: "Contratar Servicios",
+                hero_cta_explore: "Ver Proyectos",
+                stat_1: "Años de Maestría Técnica",
+                stat_2: "Latencia Menor a 50ms",
+                stat_3: "Resiliencia Operativa",
+                stat_4: "Mercados de Capitales Tier-1",
+                solutions_tag: "Capacidades",
+                solutions_title: "Capacidades de Arquitectura e Ingeniería",
+                solutions_subtitle: "Diseño e implementación de sistemas tolerantes a fallos con altos estándares de calidad técnica.",
+                card1_title: "Backends Distribuidos y Streaming de Eventos",
+                card1_desc: "Microservicios de baja latencia para ingesta masiva de datos en tiempo real mediante Apache Kafka y conexiones asíncronas de base de datos.",
+                card2_title: "Sistemas Cuantitativos y Financieros",
+                card2_desc: "Motores de cálculo, valoración de renta fija, divisas (FX) y derivados con integridad numérica absoluta, pistas de auditoría y conciliación cruzada.",
+                card3_title: "Deep-Tech y Optimización Algorítmica",
+                card3_desc: "Llevando la investigación matemática a producción: optimización combinatoria, validación de esquemas de alto volumen y machine learning.",
+                track_tag: "Trayectoria",
+                track_title: "Proyectos Institucionales Destacados",
+                track_subtitle: "Liderazgo técnico entregando resultados a clientes corporativos globales bajo estrictos acuerdos de nivel de servicio.",
+                case1_badge: "Infraestructura FinTech Tier-1 en EE. UU.",
+                case1_title: "Motor de Cálculo de Políticas de Voto Corporativo",
+                case1_market: "Operaciones de Accionistas en NYSE",
+                case1_desc: "Diseño de microservicios de alto rendimiento para votaciones institucionales en las bolsas estadounidenses. Ingesta veloz de archivos XML y JSON mediante FastAPI y Flask con latencia inferior a 50 ms.",
+                case2_badge: "Global Markets Operations Technology (GMOT)",
+                case2_title: "Mesas de Negociación (Derivados, Renta Fija, FX)",
+                case2_market: "Banca de Inversión Global Tier-1",
+                case2_desc: "Liderazgo técnico en APIs de cálculo y verificación de operaciones en C# y Python, con dashboards interactivos en React y conciliación contable automatizada.",
+                case3_badge: "Seguridad Criptográfica y Logística Global",
+                case3_title: "Microservicios de Telemetría para Hardware de Seguridad",
+                case3_market: "Líder Global de Autenticación",
+                case3_desc: "Microservicios en Go y Python con Azure Service Bus para telemetría en tiempo real y monitoreo de la distribución global de llaves criptográficas.",
+                stack_tag: "Pila Tecnológica",
+                stack_title: "Herramientas de Ingeniería en Producción",
+                stack_subtitle: "Lenguajes, frameworks y plataformas en la nube probadas en entornos de alta exigencia.",
+                stack_col1: "Back-End",
+                stack_col2: "Datos y Streaming",
+                stack_col3: "Cloud y DevOps",
+                stack_col4: "Front-End y Calidad",
+                lead_badge: "Liderazgo Técnico Ejecutivo",
+                lead_role: "Socio Gerente y Arquitecto Principal de Sistemas",
+                lead_bio: "Arquitecto de Software Senior con más de 11 años de experiencia en sistemas distribuidos y plataformas financieras. Máster y Candidato a Doctor en Ciencias de la Computación por la UNICAMP. Ciudadano italiano y brasileño.",
+                lead_cred1: "Máster y Candidato a Ph.D. (UNICAMP)",
+                lead_cred2: "Ciudadano UE y Brasileño",
+                lead_cred3: "Certificación CPA-20 (ANBIMA)",
+                contact_tag: "Contacto Corporativo",
+                contact_title: "Contrate la Asesoría Técnica de Nardi Tech",
+                contact_subtitle: "Disponible para contratos de modernización de arquitecturas, backend escalable y consultoría técnica especializada.",
+                contact_email_label: "Correo Directo",
+                contact_social_label: "Conectar",
+                contact_social_val: "LinkedIn Ejecutivo",
+                footer_legal: "Registrada en Wyoming, Estados Unidos • Dirección: 30 N Gould St Ste N, Sheridan, WY 82801",
+                footer_copy: "© 2026 Nardi Tech LLC. Todos los derechos reservados."
+            },
+            de: {
+                nav_subtitle: "Systemarchitektur & Deep-Tech-Beratung",
+                nav_solutions: "Lösungen",
+                nav_track_record: "Referenzprojekte",
+                nav_tech_stack: "Technologien",
+                nav_leadership: "Führung",
+                nav_schedule: "Gespräch Buchen",
+                hero_badge: "Architektur Kritischer Systeme",
+                hero_title_1: "Engineering von",
+                hero_title_highlight: "Hochdurchsatz-",
+                hero_title_2: "Backend-Systemen & Finanzinfrastruktur.",
+                hero_desc: "Nardi Tech LLC ist ein spezialisiertes Ingenieurunternehmen für verteilte Systemarchitekturen, Transaktionsverarbeitung mit extrem geringer Latenz und Deep-Tech-Algorithmen für Finanzinstitute und Cloud-Plattformen.",
+                hero_cta_advisory: "Beratung Anfragen",
+                hero_cta_explore: "Projekte Ansehen",
+                stat_1: "Jahre Engineering-Erfahrung",
+                stat_2: "Latenz unter 50ms",
+                stat_3: "Betriebliche Resilienz",
+                stat_4: "Tier-1 Finanzmärkte",
+                solutions_tag: "Kompetenzen",
+                solutions_title: "Architektur- und Entwicklungskompetenzen",
+                solutions_subtitle: "Entwicklung fehlertoleranter und hoch skalierbarer Systeme nach strengsten Software-Craftsmanship-Standards.",
+                card1_title: "Verteiltes Backend & Event-Streaming",
+                card1_desc: "Microservices mit minimaler Latenz für die Verarbeitung großer Datenmengen. Streaming-Pipelines mit Apache Kafka und asynchronem Datenbankzugriff.",
+                card2_title: "Quantitative Systeme & Finanzen",
+                card2_desc: "Berechnungsmodule für Stimmrechtsausübung (Proxy Voting), Zinsprodukte, Devisen und Derivate mit lückenlosen Prüfpfaden und Abgleich.",
+                card3_title: "Deep-Tech & Angewandte Optimierung",
+                card3_desc: "Überführung fortgeschrittener Algorithmen in den Produktivbetrieb: kombinatorische Optimierung, Schema-Validierung und Machine Learning.",
+                track_tag: "Erfolgsbilanz",
+                track_title: "Ausgewählte Beratungsprojekte",
+                track_subtitle: "Strategische technische Leitung für globale Großkunden unter anspruchsvollen SLAs.",
+                case1_badge: "Tier-1 US-Finanztechnologie-Infrastruktur",
+                case1_title: "Plattform zur Berechnung von Stimmrechtsrichtlinien",
+                case1_market: "NYSE-Aktionärsoperationen",
+                case1_desc: "Architektur und Backend-Microservices für institutionelle Stimmrechtsentscheidungen an den US-Börsen. REST-Services in FastAPI/Flask mit Antwortzeiten unter 50ms.",
+                case2_badge: "Global Markets Operations Technology (GMOT)",
+                case2_title: "Handelsplatz-Systeme (Derivate, Devisen, Anleihen)",
+                case2_market: "Tier-1 Investmentbanking",
+                case2_desc: "Entwicklung hochperformanter APIs in C# und Python, reaktive Dashboards mit React + TypeScript und automatisierter Bilanzabgleich.",
+                case3_badge: "Hardware-Sicherheit & Globale Logistik",
+                case3_title: "Microservices für Sicherheitsschlüssel-Telemetrie",
+                case3_market: "Weltweiter Marktführer für Authentifizierung",
+                case3_desc: "Backend-Services in Go und Python mit Azure Service Bus für weltweites Monitoring der Lieferketten von Sicherheitsschlüsseln.",
+                stack_tag: "Technologie-Stack",
+                stack_title: "Etablierte Produktionstechnologien",
+                stack_subtitle: "Bewährte Sprachen, Datenbanken und Cloud-Lösungen für höchste Zuverlässigkeit.",
+                stack_col1: "Backend",
+                stack_col2: "Daten & Streaming",
+                stack_col3: "Cloud & DevOps",
+                stack_col4: "Frontend & Qualität",
+                lead_badge: "Technische Geschäftsführung",
+                lead_role: "Managing Partner & Leitender Systemarchitekt",
+                lead_bio: "Senior Software-Architekt mit über 11 Jahren Erfahrung in verteilten Systemen und Finanzinfrastrukturen. Master und Doktorand der Informatik an der UNICAMP. Italienischer und brasilianischer Staatsbürger.",
+                lead_cred1: "M.Sc. & Ph.D.-Kandidat (UNICAMP)",
+                lead_cred2: "EU- und brasilianischer Staatsbürger",
+                lead_cred3: "ANBIMA CPA-20 Zertifiziert",
+                contact_tag: "Kontakt",
+                contact_title: "Nardi Tech für Technische Beratung Beauftragen",
+                contact_subtitle: "Verfügbar für ausgewählte Beratungsmandate, Legacy-Modernisierung und Systemarchitektur.",
+                contact_email_label: "Direkte E-Mail",
+                contact_social_label: "Vernetzung",
+                contact_social_val: "Executive LinkedIn",
+                footer_legal: "Registriert in Wyoming, USA • Hauptsitz: 30 N Gould St Ste N, Sheridan, WY 82801",
+                footer_copy: "© 2026 Nardi Tech LLC. Alle Rechte vorbehalten."
+            },
+            fr: {
+                nav_subtitle: "Conseil en Architecture & Deep-Tech",
+                nav_solutions: "Solutions",
+                nav_track_record: "Réalisations",
+                nav_tech_stack: "Technologies",
+                nav_leadership: "Direction",
+                nav_schedule: "Prendre RDV",
+                hero_badge: "Architecture de Systèmes Critiques",
+                hero_title_1: "Ingénierie de",
+                hero_title_highlight: "Haut Débit",
+                hero_title_2: "pour Backends Distribués & Systèmes Financiers.",
+                hero_desc: "Nardi Tech LLC est un cabinet d'ingénierie spécialisé dans la conception de systèmes résilients, le traitement transactionnel à très faible latence et l'intégration algorithmique pour institutions financières et plateformes cloud.",
+                hero_cta_advisory: "Engager l'Expertise",
+                hero_cta_explore: "Découvrir les Projets",
+                stat_1: "Années d'Expertise en Ingénierie",
+                stat_2: "Latence Inférieure à 50ms",
+                stat_3: "Résilience Opérationnelle",
+                stat_4: "Marchés de Capitaux Tier-1",
+                solutions_tag: "Compétences",
+                solutions_title: "Expertise en Architecture et Ingénierie",
+                solutions_subtitle: "Développement de systèmes fiables et tolérants aux pannes selon les normes d'artisanat logiciel les plus strictes.",
+                card1_title: "Backends Distribués & Streaming d'Événements",
+                card1_desc: "Microservices à faible latence pour l'ingestion massive de données. Traitement de flux en temps réel avec Apache Kafka et persistance asynchrone.",
+                card2_title: "Systèmes Quantitatifs & Financiers",
+                card2_desc: "Moteurs de règles de vote institutionnel, valorisation d'actifs à revenu fixe, devises (FX) et dérivés avec réconciliation comptable stricte.",
+                card3_title: "Deep-Tech & Optimisation Appliquée",
+                card3_desc: "Intégration d'algorithmes avancés en environnement de production: optimisation combinatoire, validation massive de schémas et machine learning.",
+                track_tag: "Réalisations",
+                track_title: "Missions de Conseil Sélectionnées",
+                track_subtitle: "Direction technique pour des clients institutionnels majeurs soumis à des exigences élevées de fiabilité.",
+                case1_badge: "Infrastructure FinTech Tier-1 aux États-Unis",
+                case1_title: "Moteur de Vote par Procuration Institutionnel",
+                case1_market: "Opérations d'Actionnaires (NYSE)",
+                case1_desc: "Conception architecturale et déploiement de microservices pour le vote d'actionnaires sur les marchés financiers américains. Ingestion de flux XML et JSON avec une latence sub-50ms.",
+                case2_badge: "Global Markets Operations Technology (GMOT)",
+                case2_title: "Salles de Marché (Dérivés, Rente Fixe, FX)",
+                case2_market: "Banque d'Investissement Tier-1",
+                case2_desc: "Conception d'APIs transactionnelles en C# et Python, interfaces de contrôle avec React + TypeScript et réconciliation multi-registres automatique.",
+                case3_badge: "Sécurité Cryptographique & Logistique",
+                case3_title: "Télémétrie et Suivi de Chaîne Logistique",
+                case3_market: "Leader Mondial de l'Authentification",
+                case3_desc: "Microservices en Go et Python connectés à Azure Service Bus pour le suivi de distribution et la télémétrie de clés de sécurité matérielles.",
+                stack_tag: "Stack Technique",
+                stack_title: "Arsenal Technologique Éprouvé",
+                stack_subtitle: "Langages de programmation, bases de données et services cloud utilisés en production.",
+                stack_col1: "Back-End",
+                stack_col2: "Données & Streaming",
+                stack_col3: "Cloud & DevOps",
+                stack_col4: "Front-End & Qualité",
+                lead_badge: "Direction Technique Exécutive",
+                lead_role: "Associé Gérant & Architecte Principal de Systèmes",
+                lead_bio: "Architecte logiciel senior avec plus de 11 ans d'expérience dans les systèmes distribués et l'ingénierie financière. Titulaire d'un Master et Doctorant en Informatique à l'UNICAMP. Citoyen italien et brésilien.",
+                lead_cred1: "M.Sc. & Doctorant (UNICAMP)",
+                lead_cred2: "Citoyen de l'UE et Brésilien",
+                lead_cred3: "Certifié CPA-20 (ANBIMA)",
+                contact_tag: "Contact",
+                contact_title: "Solliciter Nardi Tech pour vos Projets Techniques",
+                contact_subtitle: "Disponible pour des missions d'architecture, de modernisation de code patrimonial et d'optimisation backend.",
+                contact_email_label: "Courriel Direct",
+                contact_social_label: "Réseau",
+                contact_social_val: "LinkedIn Exécutif",
+                footer_legal: "Enregistrée au Wyoming, États-Unis • Siège: 30 N Gould St Ste N, Sheridan, WY 82801",
+                footer_copy: "© 2026 Nardi Tech LLC. Tous droits réservés."
+            },
+            et: {
+                nav_subtitle: "Süsteemiarhitektuur & Deep-Tech Nõustamine",
+                nav_solutions: "Lahendused",
+                nav_track_record: "Kogemus",
+                nav_tech_stack: "Tehnoloogiad",
+                nav_leadership: "Juhtkond",
+                nav_schedule: "Broneeri Kohtumine",
+                hero_badge: "Kriitilise Tähtsusega Süsteemide Arhitektuur",
+                hero_title_1: "Suure",
+                hero_title_highlight: "Jõudlusega",
+                hero_title_2: "Hajussüsteemide ja Finantstehnoloogia Inseneeria.",
+                hero_desc: "Nardi Tech LLC on spetsialiseerunud tarkvarainseneeria ettevõte, mis pakub süsteemiarhitektuuri, madala latentsusajaga tehingute töötlemist ja süvatehnoloogia algoritme finantsasutustele ja pilveplatvormidele.",
+                hero_cta_advisory: "Tellige Nõustamine",
+                hero_cta_explore: "Tutvuge Töödega",
+                stat_1: "Aastat Tipptasemel Kogemust",
+                stat_2: "Latentsusaeg Alla 50ms",
+                stat_3: "Töökindlus ja Vastupidavus",
+                stat_4: "Tier-1 Kapitaliturud",
+                solutions_tag: "Võimekused",
+                solutions_title: "Arhitektuuri- ja Inseneeriavõimekus",
+                solutions_subtitle: "Kõrge kättesaadavusega ja tõrkekindlate süsteemide ehitamine rangeima käsitöödistsipliiniga.",
+                card1_title: "Hajus-Backend ja Sündmuste Voogesitus",
+                card1_desc: "Madala latentsusajaga mikroteenused suure andmemahu töötlemiseks. Reaalajas andmevood Apache Kafka ja asünkroonse andmebaasiliidese abil.",
+                card2_title: "Kvantitatiivsed ja Finantssüsteemid",
+                card2_desc: "Hääletusreeglite mootorid, fikseeritud tulumääraga väärtpaberid, valuuta- ja tuletisinstrumendid täieliku auditeeritavusega.",
+                card3_title: "Süvatehnoloogia ja Rakenduslik Optimeerimine",
+                card3_desc: "Teaduslike algoritmide rakendamine tootmises: kombinatoorne optimeerimine, skeemide valideerimine ja masinõppelahendused.",
+                track_tag: "Tehtud Tööd",
+                track_title: "Valitud Konsultatsiooni- ja Inseneeriaprojektid",
+                track_subtitle: "Strateegiline tehniline juhtimine globaalsetele institutsionaalsetele klientidele rangete SLA lepingute alusel.",
+                case1_badge: "USA Tier-1 Finantstehnoloogia Infrastruktuur",
+                case1_title: "Institutsionaalse Hääletuspoliitika Arvutusmootor",
+                case1_market: "NYSE Aktsionäride Tehingud",
+                case1_desc: "USA börside aktsionäride hääletusotsuste töötlemise arhitektuur ja mikroteenused. Kiire XML ja JSON andmevoogude valideerimine FastAPI ja Flaskiga (latentsus < 50ms).",
+                case2_badge: "Global Markets Operations Technology (GMOT)",
+                case2_title: "Investeerimispanganduse Kauplemislauad (FX, Derivatiivid)",
+                case2_market: "Tier-1 Investeerimispank",
+                case2_desc: "Kõrge jõudlusega C# ja Python arvutus-API-de juhtimine, React + TypeScript töölauad ning automatiseeritud raamatupidamiskontroll.",
+                case3_badge: "Riistvaraline Turvalisus ja Globaalne Logistika",
+                case3_title: "Turvavõtmete Telemeetria ja Tarneahela Mikroteenused",
+                case3_market: "Rahvusvaheline Autentimise Liider",
+                case3_desc: "Madala latentsusega Go ja Python teenused Azure Service Bus integratsiooniga krüptovõtmete globaalseks logistiliseks jälgimiseks.",
+                stack_tag: "Tehnoloogiapakk",
+                stack_title: "Tootmises Karastunud Tehnoloogiad",
+                stack_subtitle: "Kogemustega kontrollitud keeled, andmebaasid ja pilvelahendused.",
+                stack_col1: "Backend Core",
+                stack_col2: "Andmed ja Sõnumijärjekorrad",
+                stack_col3: "Pilv ja Haldus",
+                stack_col4: "Frontend ja Kvaliteet",
+                lead_badge: "Tehniline Tippjuhtimine",
+                lead_role: "Juhtivpartner ja Peaarhitekt",
+                lead_bio: "Vanemtarkvaraarhitekt üle 11-aastase kogemusega hajussüsteemides ja finantslahendustes. Magistrikraad ning doktorant arvutiteaduses UNICAMP ülikoolis. Itaalia ja Brasiilia kodanik.",
+                lead_cred1: "M.Sc. ja Ph.D. Kandidaat (UNICAMP)",
+                lead_cred2: "Euroopa Liidu ja Brasiilia Kodanik",
+                lead_cred3: "ANBIMA CPA-20 Sertifikaat",
+                contact_tag: "Kontakt",
+                contact_title: "Tellige Nardi Tech Inseneeriakonsultatsioon",
+                contact_subtitle: "Avatud valitud projektidele süsteemiarhitektuuri, pärandsüsteemide moderniseerimise ja kriitiliste teenuste valdkonnas.",
+                contact_email_label: "Otsene E-post",
+                contact_social_label: "Võrgustik",
+                contact_social_val: "Executive LinkedIn",
+                footer_legal: "Registreeritud Wyomingis, USA-s • Peakontor: 30 N Gould St Ste N, Sheridan, WY 82801",
+                footer_copy: "© 2026 Nardi Tech LLC. Kõik õigused kaitstud."
+            }
+        };
+
+        function applyLanguage(selectedLang) {
+            const langCode = translations[selectedLang] ? selectedLang : 'en';
+            const dict = translations[langCode];
+
+            document.querySelectorAll('[data-i18n]').forEach((element) => {
+                const key = element.getAttribute('data-i18n');
+                if (dict && dict[key] !== undefined) {
+                    element.textContent = dict[key];
+                }
+            });
+
+            try {
+                localStorage.setItem('narditech_selected_lang', langCode);
+            } catch (e) {
+                console.warn('Storage unavailable', e);
+            }
+            document.documentElement.lang = langCode;
+
+            // Destaque na bandeira ativa
+            document.querySelectorAll('.lang-btn').forEach((btn) => {
+                const btnLang = btn.getAttribute('data-lang');
+                if (btnLang === langCode) {
+                    btn.classList.add('bg-cyan-950', 'ring-1', 'ring-cyan-400');
+                } else {
+                    btn.classList.remove('bg-cyan-950', 'ring-1', 'ring-cyan-400');
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Delegação robusta de cliques em botões de idioma
+            document.querySelectorAll('.lang-btn').forEach((button) => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetLang = button.getAttribute('data-lang');
+                    applyLanguage(targetLang);
+                });
+            });
+
+            // Carrega preferência anterior do cache ou adota padrão 'en'
+            let initialLang = 'en';
+            try {
+                initialLang = localStorage.getItem('narditech_selected_lang') || 'en';
+            } catch (e) {}
+            applyLanguage(initialLang);
+
+            // Toggle do menu mobile
+            const menuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
