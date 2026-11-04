@@ -104,7 +104,7 @@
                 <a href="#architecture" class="hover:text-cyan-400 transition-colors" data-i18n="nav_tech_stack">Tech Stack</a>
                 <a href="#leadership" class="hover:text-cyan-400 transition-colors" data-i18n="nav_leadership">Leadership</a>
                 
-                <!-- Desktop Language Flags -->
+                <!-- Bandeiras Desktop com onclick direto -->
                 <div class="flex items-center bg-navy-800/90 border border-white/10 rounded-lg px-2 py-1 space-x-1.5 shadow-inner">
                     <button type="button" onclick="changeLang('en')" data-lang="en" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="English (US)">🇺🇸</button>
                     <button type="button" onclick="changeLang('pt')" data-lang="pt" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Português (Brasil)">🇧🇷</button>
@@ -119,7 +119,7 @@
                 </a>
             </nav>
 
-            <!-- Mobile Flags & Menu Toggle -->
+            <!-- Mobile Controls com onclick direto -->
             <div class="flex items-center space-x-2 lg:hidden">
                 <div class="flex items-center bg-navy-800 border border-white/10 rounded-lg px-1.5 py-1 text-xs">
                     <button type="button" onclick="changeLang('en')" data-lang="en" class="lang-btn p-1">🇺🇸</button>
@@ -495,7 +495,7 @@
         </div>
     </footer>
 
-    <!-- Multilingual i18n Dictionary & Event Listener Script -->
+    <!-- Multilingual i18n Dictionary & Direct Script Execution -->
     <script>
         const translations = {
             en: {
@@ -805,7 +805,7 @@
                 stack_col4: "Front-End & Qualité",
                 lead_badge: "Direction Technique Exécutive",
                 lead_role: "Associé Gérant & Architecte Principal de Systèmes",
-                lead_bio: "Architecte logiciel senior avec plus de 11 ans d'expérience dans les systèmes distribués et l'ingénierie financière. Titulaire d'un Master et Doctorant en Informatique à l'UNICAMP. Citoyen italien et brésilien.",
+                lead_bio: "Architecte logiciel senior avec plus de 11 ans d'expérience dans les sistemas distribués et l'ingénierie financière. Titulaire d'un Master et Doctorant en Informatique à l'UNICAMP. Citoyen italien et brésilien.",
                 lead_cred1: "M.Sc. & Doctorant (UNICAMP)",
                 lead_cred2: "Citoyen de l'UE et Brésilien",
                 lead_cred3: "Certifié CPA-20 (ANBIMA)",
@@ -884,10 +884,12 @@
             }
         };
 
+        // Função global atribuída diretamente ao escopo window
         window.changeLang = function(selectedLang) {
             const langCode = translations[selectedLang] ? selectedLang : 'en';
             const dict = translations[langCode];
 
+            // Atualiza todos os elementos que possuem o atributo data-i18n
             document.querySelectorAll('[data-i18n]').forEach((element) => {
                 const key = element.getAttribute('data-i18n');
                 if (dict && dict[key] !== undefined) {
@@ -895,12 +897,14 @@
                 }
             });
 
+            // Grava o idioma selecionado no cache local
             try {
                 localStorage.setItem('narditech_lang_pref', langCode);
             } catch (e) {}
 
             document.documentElement.lang = langCode;
 
+            // Destaque visual na bandeira clicada
             document.querySelectorAll('.lang-btn').forEach((btn) => {
                 if (btn.getAttribute('data-lang') === langCode) {
                     btn.classList.add('bg-cyan-950', 'ring-1', 'ring-cyan-400');
@@ -910,6 +914,7 @@
             });
         };
 
+        // Execução imediata no carregamento do script (sem aguardar DOMContentLoaded)
         (function() {
             let initial = 'en';
             try {
@@ -917,6 +922,7 @@
             } catch (e) {}
             window.changeLang(initial);
 
+            // Toggle do menu mobile
             const menuBtn = document.getElementById('mobileMenuBtn');
             const mobileMenu = document.getElementById('mobileMenu');
             if (menuBtn && mobileMenu) {
