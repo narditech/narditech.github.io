@@ -106,12 +106,12 @@
                 
                 <!-- Desktop Language Flags -->
                 <div class="flex items-center bg-navy-800/90 border border-white/10 rounded-lg px-2 py-1 space-x-1.5 shadow-inner">
-                    <button type="button" data-lang="en" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="English (US)">🇺🇸</button>
-                    <button type="button" data-lang="pt" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Português (Brasil)">🇧🇷</button>
-                    <button type="button" data-lang="es" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Español (Latinoamérica)">🇪🇸</button>
-                    <button type="button" data-lang="de" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Deutsch">🇩🇪</button>
-                    <button type="button" data-lang="fr" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Français">🇫🇷</button>
-                    <button type="button" data-lang="et" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Eesti">🇪🇪</button>
+                    <button type="button" onclick="changeLang('en')" data-lang="en" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="English (US)">🇺🇸</button>
+                    <button type="button" onclick="changeLang('pt')" data-lang="pt" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Português (Brasil)">🇧🇷</button>
+                    <button type="button" onclick="changeLang('es')" data-lang="es" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Español (Latinoamérica)">🇪🇸</button>
+                    <button type="button" onclick="changeLang('de')" data-lang="de" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Deutsch">🇩🇪</button>
+                    <button type="button" onclick="changeLang('fr')" data-lang="fr" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Français">🇫🇷</button>
+                    <button type="button" onclick="changeLang('et')" data-lang="et" class="lang-btn hover:scale-110 transition-transform p-1 rounded" title="Eesti">🇪🇪</button>
                 </div>
 
                 <a href="#contact" class="px-4 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-navy-900 font-semibold transition-all shadow-md shadow-cyan-500/20" data-i18n="nav_schedule">
@@ -122,12 +122,12 @@
             <!-- Mobile Flags & Menu Toggle -->
             <div class="flex items-center space-x-2 lg:hidden">
                 <div class="flex items-center bg-navy-800 border border-white/10 rounded-lg px-1.5 py-1 text-xs">
-                    <button type="button" data-lang="en" class="lang-btn p-1">🇺🇸</button>
-                    <button type="button" data-lang="pt" class="lang-btn p-1">🇧🇷</button>
-                    <button type="button" data-lang="es" class="lang-btn p-1">🇪🇸</button>
-                    <button type="button" data-lang="de" class="lang-btn p-1">🇩🇪</button>
-                    <button type="button" data-lang="fr" class="lang-btn p-1">🇫🇷</button>
-                    <button type="button" data-lang="et" class="lang-btn p-1">🇪🇪</button>
+                    <button type="button" onclick="changeLang('en')" data-lang="en" class="lang-btn p-1">🇺🇸</button>
+                    <button type="button" onclick="changeLang('pt')" data-lang="pt" class="lang-btn p-1">🇧🇷</button>
+                    <button type="button" onclick="changeLang('es')" data-lang="es" class="lang-btn p-1">🇪🇸</button>
+                    <button type="button" onclick="changeLang('de')" data-lang="de" class="lang-btn p-1">🇩🇪</button>
+                    <button type="button" onclick="changeLang('fr')" data-lang="fr" class="lang-btn p-1">🇫🇷</button>
+                    <button type="button" onclick="changeLang('et')" data-lang="et" class="lang-btn p-1">🇪🇪</button>
                 </div>
                 <button id="mobileMenuBtn" type="button" class="text-slate-300 hover:text-white text-xl p-2" aria-label="Toggle Menu">
                     <i class="fa-solid fa-bars"></i>
@@ -811,7 +811,7 @@
                 lead_cred3: "Certifié CPA-20 (ANBIMA)",
                 contact_tag: "Contact",
                 contact_title: "Solliciter Nardi Tech pour vos Projets Techniques",
-                contact_subtitle: "Disponible pour des missions d'architecture, de modernisation de code patrimonial et d'optimisation backend.",
+                contact_subtitle: "Disponible para des missions d'architecture, de modernisation de code patrimonial et d'optimisation backend.",
                 contact_email_label: "Courriel Direct",
                 contact_social_label: "Réseau",
                 contact_social_val: "LinkedIn Exécutif",
@@ -884,7 +884,7 @@
             }
         };
 
-        function applyLanguage(selectedLang) {
+        window.changeLang = function(selectedLang) {
             const langCode = translations[selectedLang] ? selectedLang : 'en';
             const dict = translations[langCode];
 
@@ -896,49 +896,35 @@
             });
 
             try {
-                localStorage.setItem('narditech_selected_lang', langCode);
-            } catch (e) {
-                console.warn('Storage unavailable', e);
-            }
+                localStorage.setItem('narditech_lang_pref', langCode);
+            } catch (e) {}
+
             document.documentElement.lang = langCode;
 
-            // Destaque na bandeira ativa
             document.querySelectorAll('.lang-btn').forEach((btn) => {
-                const btnLang = btn.getAttribute('data-lang');
-                if (btnLang === langCode) {
+                if (btn.getAttribute('data-lang') === langCode) {
                     btn.classList.add('bg-cyan-950', 'ring-1', 'ring-cyan-400');
                 } else {
                     btn.classList.remove('bg-cyan-950', 'ring-1', 'ring-cyan-400');
                 }
             });
-        }
+        };
 
-        document.addEventListener('DOMContentLoaded', () => {
-            // Delegação robusta de cliques em botões de idioma
-            document.querySelectorAll('.lang-btn').forEach((button) => {
-                button.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const targetLang = button.getAttribute('data-lang');
-                    applyLanguage(targetLang);
-                });
-            });
-
-            // Carrega preferência anterior do cache ou adota padrão 'en'
-            let initialLang = 'en';
+        (function() {
+            let initial = 'en';
             try {
-                initialLang = localStorage.getItem('narditech_selected_lang') || 'en';
+                initial = localStorage.getItem('narditech_lang_pref') || 'en';
             } catch (e) {}
-            applyLanguage(initialLang);
+            window.changeLang(initial);
 
-            // Toggle do menu mobile
             const menuBtn = document.getElementById('mobileMenuBtn');
             const mobileMenu = document.getElementById('mobileMenu');
             if (menuBtn && mobileMenu) {
-                menuBtn.addEventListener('click', () => {
+                menuBtn.onclick = function() {
                     mobileMenu.classList.toggle('hidden');
-                });
+                };
             }
-        });
+        })();
     </script>
 </body>
 </html>
