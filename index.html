@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nardi Tech LLC | Systems Architecture & High-Throughput Engineering</title>
     <meta name="description" content="Nardi Tech LLC delivers high-throughput distributed systems, algorithmic calculation engines, and mission-critical cloud infrastructure.">
+    <meta name="theme-color" content="#07111f">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Nardi Tech LLC">
+    <meta property="og:title" content="Nardi Tech LLC | Systems Architecture & Deep-Tech Engineering">
+    <meta property="og:description" content="Systems architecture, low-latency transaction processing and deep-tech engineering.">
+    <meta name="twitter:card" content="summary">
     
     <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -79,13 +85,40 @@
             align-items: center;
         }
     </style>
+
+    <style id="nardi-premium-redesign">
+      :root{color-scheme:dark;--ink:#07111f;--panel:#0d1b2b;--panel2:#10243a;--line:rgba(174,198,220,.15);--muted:#a8b7c8;--accent:#69e0d0;--accent2:#83b7ff}
+      html{scroll-padding-top:100px} body{background:var(--ink);color:#edf4fb;font-family:Inter,system-ui,sans-serif;letter-spacing:-.012em}
+      body:before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 78% 8%,rgba(53,132,170,.19),transparent 34%),radial-gradient(ellipse at 8% 42%,rgba(43,103,128,.12),transparent 34%),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:auto,auto,48px 48px,48px 48px}
+      body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(115deg,transparent 0 48%,rgba(105,224,208,.025) 48.1%,transparent 48.3%)}
+      header.glass-card{background:rgba(7,17,31,.88)!important;border-color:var(--line)!important;backdrop-filter:blur(22px);box-shadow:0 12px 40px rgba(0,0,0,.22)}
+      header .max-w-7xl{height:82px}.glass-card{background:linear-gradient(145deg,rgba(17,37,57,.88),rgba(10,25,41,.86));border:1px solid var(--line);border-radius:20px;box-shadow:0 18px 55px rgba(0,0,0,.15);backdrop-filter:blur(14px);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+      .glass-card:hover{border-color:rgba(105,224,208,.38);transform:translateY(-4px);box-shadow:0 24px 65px rgba(0,0,0,.24)}
+      .hero-glow{background:radial-gradient(ellipse at 74% 24%,rgba(105,224,208,.13),transparent 35%),radial-gradient(ellipse at 20% 0%,rgba(131,183,255,.10),transparent 35%)}
+      .hero-glow .max-w-4xl{max-width:930px}.hero-glow h1{font-size:clamp(2.7rem,6.2vw,5.7rem);line-height:1.02;letter-spacing:-.065em;max-width:920px}.text-gradient{background:linear-gradient(100deg,#f4fbff 0%,#9eece1 44%,#83b7ff 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+      .hero-glow .inline-flex{border-color:rgba(105,224,208,.3);background:rgba(10,40,50,.58);color:#a8f4e9}.hero-glow .inline-flex .animate-pulse{background:var(--accent)}
+      a{transition:color .2s ease,background .2s ease,border-color .2s ease}a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+      .tech-pill{background:rgba(105,224,208,.07);border-color:rgba(105,224,208,.2);color:#b8eee7;font-size:.69rem;letter-spacing:.01em}
+      section{position:relative}section[id]{scroll-margin-top:100px}section .max-w-7xl,footer .max-w-7xl{max-width:1200px}
+      section h2[data-i18n]{color:var(--accent)!important}section h3{letter-spacing:-.045em!important}section p{line-height:1.8}
+      #solutions,#architecture,#contact{background:rgba(8,20,34,.48)!important}
+      #solutions .grid>div{min-height:340px}#track-record .glass-card{padding:clamp(1.4rem,3vw,2.4rem)}
+      #leadership .glass-card{background:linear-gradient(120deg,rgba(15,39,57,.98),rgba(11,27,45,.92));border-color:rgba(105,224,208,.22)}
+      #contact .glass-card{border-color:rgba(105,224,208,.24)}
+      .lang-btn{min-width:32px;min-height:32px;border-radius:8px;opacity:.72;transition:all .2s ease}.lang-btn:hover,.lang-btn[aria-pressed="true"]{opacity:1;background:rgba(105,224,208,.12);box-shadow:inset 0 0 0 1px rgba(105,224,208,.45)}
+      #mobileMenu{background:rgba(7,17,31,.98)!important;backdrop-filter:blur(20px)}
+      footer{background:#050d18!important;border-color:var(--line)!important}
+      @media(max-width:640px){header .max-w-7xl{height:72px}.hero-glow{padding-top:130px;padding-bottom:70px}.hero-glow h1{font-size:clamp(2.45rem,12vw,4rem)}.hero-glow .grid{gap:1.1rem}.hero-glow .grid>div{min-width:0}#solutions .grid>div{min-height:0}}
+      @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+    </style>
+
 </head>
 <body class="selection:bg-cyan-500 selection:text-navy-900">
 
     <!-- Header / Navbar -->
     <header class="fixed top-0 left-0 right-0 z-50 glass-card !border-t-0 !border-x-0 !rounded-none border-b border-white/10 bg-navy-900/80">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center space-x-3 group">
+            <a href="#" class="flex items-center space-x-3 group" aria-label="Nardi Tech home">
                 <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-navy-900 font-extrabold text-xl shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
                     N
                 </div>
@@ -568,7 +601,7 @@
                 nav_track_record: "Projetos e Casos",
                 nav_tech_stack: "Stack Tecnológica",
                 nav_leadership: "Liderança",
-                nav_schedule: "Agendar Revisão",
+                nav_schedule: "Agendar conversa",
                 hero_badge: "Arquitetura de Sistemas de Missão Crítica",
                 hero_title_1: "Engenharia de",
                 hero_title_highlight: "Alto Throughput",
@@ -582,13 +615,13 @@
                 stat_4: "Mercado de Capitais Tier-1",
                 solutions_tag: "Capacidades",
                 solutions_title: "Especialidades de Arquitetura e Engenharia",
-                solutions_subtitle: "Desenvolvimento de sistemas rigorosos e tolerantes a falhas sob os mais altos padrões de artesanato de software.",
+                solutions_subtitle: "Desenvolvimento de sistemas rigorosos e tolerantes a falhas, seguindo elevados padrões de engenharia de software.",
                 card1_title: "Back-End Distribuído e Streaming de Eventos",
                 card1_desc: "Arquitetura de microsserviços de baixa latência para ingestão contínua em larga escala. Pipelines em tempo real com Apache Kafka e padrões assíncronos no banco de dados.",
                 card2_title: "Sistemas Quantitativos e Financeiros",
                 card2_desc: "Engenhos de precificação, motores de regras para votação por procuração, renda fixa, câmbio (FX) e derivativos com validação numérica estrita, trilhas de auditoria e conciliação contábil.",
                 card3_title: "Deep-Tech e Otimização Aplicada",
-                card3_desc: "Transformando pesquisa algorítmica avançada em produtos de produção estáveis. Otimização combinatória, pipelines de validação massiva de esquemas e inteligência artificial.",
+                card3_desc: "Transformando pesquisa algorítmica avançada em soluções prontas para produção. Otimização combinatória, pipelines de validação de esquemas em grande escala e aprendizado de máquina.",
                 track_tag: "Histórico Comprovado",
                 track_title: "Projetos Institucionais Selecionados",
                 track_subtitle: "Liderança técnica e entrega de valor em clientes globais sob rigorosos acordos de nível de serviço (SLA).",
@@ -640,7 +673,7 @@
                 hero_desc: "Nardi Tech LLC es una consultoría de ingeniería especializada en arquitectura de software, procesamiento transaccional de baja latencia e integración algorítmica para instituciones financieras, líderes de ciberseguridad y plataformas en la nube.",
                 hero_cta_advisory: "Contratar Servicios",
                 hero_cta_explore: "Ver Proyectos",
-                stat_1: "Años de Maestría Técnica",
+                stat_1: "Años de experiencia en ingeniería",
                 stat_2: "Latencia Menor a 50ms",
                 stat_3: "Resiliencia Operativa",
                 stat_4: "Mercados de Capitales Tier-1",
@@ -650,14 +683,14 @@
                 card1_title: "Backends Distribuidos y Streaming de Eventos",
                 card1_desc: "Microservicios de baja latencia para ingesta masiva de datos en tiempo real mediante Apache Kafka y conexiones asíncronas de base de datos.",
                 card2_title: "Sistemas Cuantitativos y Financieros",
-                card2_desc: "Motores de cálculo, valoración de renta fija, divisas (FX) y derivados con integridad numérica absoluta, pistas de auditoría y conciliación cruzada.",
+                card2_desc: "Motores de cálculo, valoración de renta fija, divisas (FX) y derivados con integridad numérica, registros de auditoría y conciliación automatizada.",
                 card3_title: "Deep-Tech y Optimización Algorítmica",
                 card3_desc: "Llevando la investigación matemática a producción: optimización combinatoria, validación de esquemas de alto volumen y machine learning.",
                 track_tag: "Trayectoria",
                 track_title: "Proyectos Institucionales Destacados",
                 track_subtitle: "Liderazgo técnico entregando resultados a clientes corporativos globales bajo estrictos acuerdos de nivel de servicio.",
                 case1_badge: "Infraestructura FinTech Tier-1 en EE. UU.",
-                case1_title: "Motor de Cálculo de Políticas de Voto Corporativo",
+                case1_title: "Motor de Cálculo de Políticas de Voto por Representación",
                 case1_market: "Operaciones de Accionistas en NYSE",
                 case1_desc: "Diseño de microservicios de alto rendimiento para votaciones institucionales en las bolsas estadounidenses. Ingesta veloz de archivos XML y JSON mediante FastAPI y Flask con latencia inferior a 50 ms.",
                 case2_badge: "Global Markets Operations Technology (GMOT)",
@@ -696,7 +729,7 @@
                 nav_track_record: "Referenzprojekte",
                 nav_tech_stack: "Technologien",
                 nav_leadership: "Führung",
-                nav_schedule: "Gespräch Buchen",
+                nav_schedule: "Beratungsgespräch vereinbaren",
                 hero_badge: "Architektur Kritischer Systeme",
                 hero_title_1: "Engineering von",
                 hero_title_highlight: "Hochdurchsatz-",
@@ -727,7 +760,7 @@
                 case2_badge: "Global Markets Operations Technology (GMOT)",
                 case2_title: "Handelsplatz-Systeme (Derivate, Devisen, Anleihen)",
                 case2_market: "Tier-1 Investmentbanking",
-                case2_desc: "Entwicklung hochperformanter APIs in C# und Python, reaktive Dashboards mit React + TypeScript und automatisierter Bilanzabgleich.",
+                case2_desc: "Entwicklung leistungsfähiger APIs in C# und Python, reaktiver Dashboards mit React + TypeScript und automatisiertem Datenabgleich.",
                 case3_badge: "Hardware-Sicherheit & Globale Logistik",
                 case3_title: "Microservices für Sicherheitsschlüssel-Telemetrie",
                 case3_market: "Weltweiter Marktführer für Authentifizierung",
@@ -741,7 +774,7 @@
                 stack_col4: "Frontend & Qualität",
                 lead_badge: "Technische Geschäftsführung",
                 lead_role: "Managing Partner & Leitender Systemarchitekt",
-                lead_bio: "Senior Software-Architekt mit über 11 Jahren Erfahrung in verteilten Systemen und Finanzinfrastrukturen. Master und Doktorand der Informatik an der UNICAMP. Italienischer und brasilianischer Staatsbürger.",
+                lead_bio: "Senior-Softwarearchitekt mit mehr als 11 Jahren Erfahrung in verteilten Systemen und Finanzinfrastrukturen. Masterabschluss und Promotionsstudium der Informatik an der UNICAMP. Italienischer und brasilianischer Staatsbürger.",
                 lead_cred1: "M.Sc. & Ph.D.-Kandidat (UNICAMP)",
                 lead_cred2: "EU- und brasilianischer Staatsbürger",
                 lead_cred3: "ANBIMA CPA-20 Zertifiziert",
@@ -763,7 +796,7 @@
                 nav_schedule: "Prendre RDV",
                 hero_badge: "Architecture de Systèmes Critiques",
                 hero_title_1: "Ingénierie de",
-                hero_title_highlight: "Haut Débit",
+                hero_title_highlight: "Hautes performances",
                 hero_title_2: "pour Backends Distribués & Systèmes Financiers.",
                 hero_desc: "Nardi Tech LLC est un cabinet d'ingénierie spécialisé dans la conception de systèmes résilients, le traitement transactionnel à très faible latence et l'intégration algorithmique pour institutions financières et plateformes cloud.",
                 hero_cta_advisory: "Engager l'Expertise",
@@ -789,7 +822,7 @@
                 case1_market: "Opérations d'Actionnaires (NYSE)",
                 case1_desc: "Conception architecturale et déploiement de microservices pour le vote d'actionnaires sur les marchés financiers américains. Ingestion de flux XML et JSON avec une latence sub-50ms.",
                 case2_badge: "Global Markets Operations Technology (GMOT)",
-                case2_title: "Salles de Marché (Dérivés, Rente Fixe, FX)",
+                case2_title: "Systèmes de marchés (dérivés, produits à revenu fixe et FX)",
                 case2_market: "Banque d'Investissement Tier-1",
                 case2_desc: "Conception d'APIs transactionnelles en C# et Python, interfaces de contrôle avec React + TypeScript et réconciliation multi-registres automatique.",
                 case3_badge: "Sécurité Cryptographique & Logistique",
@@ -805,13 +838,13 @@
                 stack_col4: "Front-End & Qualité",
                 lead_badge: "Direction Technique Exécutive",
                 lead_role: "Associé Gérant & Architecte Principal de Systèmes",
-                lead_bio: "Architecte logiciel senior avec plus de 11 ans d'expérience dans les sistemas distribués et l'ingénierie financière. Titulaire d'un Master et Doctorant en Informatique à l'UNICAMP. Citoyen italien et brésilien.",
+                lead_bio: "Architecte logiciel senior avec plus de 11 ans d’expérience dans les systèmes distribués et l’ingénierie financière. Titulaire d’un master et doctorant en informatique à l’UNICAMP. Citoyen italien et brésilien.",
                 lead_cred1: "M.Sc. & Doctorant (UNICAMP)",
                 lead_cred2: "Citoyen de l'UE et Brésilien",
                 lead_cred3: "Certifié CPA-20 (ANBIMA)",
                 contact_tag: "Contact",
                 contact_title: "Solliciter Nardi Tech pour vos Projets Techniques",
-                contact_subtitle: "Disponible para des missions d'architecture, de modernisation de code patrimonial et d'optimisation backend.",
+                contact_subtitle: "Disponible pour des missions d’architecture, de modernisation de systèmes existants et d’optimisation backend.",
                 contact_email_label: "Courriel Direct",
                 contact_social_label: "Réseau",
                 contact_social_val: "LinkedIn Exécutif",
@@ -826,7 +859,7 @@
                 nav_leadership: "Juhtkond",
                 nav_schedule: "Broneeri Kohtumine",
                 hero_badge: "Kriitilise Tähtsusega Süsteemide Arhitektuur",
-                hero_title_1: "Suure",
+                hero_title_1: "Suure jõudlusega",
                 hero_title_highlight: "Jõudlusega",
                 hero_title_2: "Hajussüsteemide ja Finantstehnoloogia Inseneeria.",
                 hero_desc: "Nardi Tech LLC on spetsialiseerunud tarkvarainseneeria ettevõte, mis pakub süsteemiarhitektuuri, madala latentsusajaga tehingute töötlemist ja süvatehnoloogia algoritme finantsasutustele ja pilveplatvormidele.",
@@ -874,7 +907,7 @@
                 lead_cred2: "Euroopa Liidu ja Brasiilia Kodanik",
                 lead_cred3: "ANBIMA CPA-20 Sertifikaat",
                 contact_tag: "Kontakt",
-                contact_title: "Tellige Nardi Tech Inseneeriakonsultatsioon",
+                contact_title: "Küsi Nardi Techi insenerikonsultatsiooni",
                 contact_subtitle: "Avatud valitud projektidele süsteemiarhitektuuri, pärandsüsteemide moderniseerimise ja kriitiliste teenuste valdkonnas.",
                 contact_email_label: "Otsene E-post",
                 contact_social_label: "Võrgustik",
@@ -932,5 +965,60 @@
             }
         })();
     </script>
+
+    <script>
+      (() => {
+        const supported = ['en','pt','es','de','fr','et'];
+        const titleByLang = {
+          en:'Nardi Tech LLC | Systems Architecture & Deep-Tech Engineering',
+          pt:'Nardi Tech LLC | Arquitetura de Sistemas e Engenharia Deep-Tech',
+          es:'Nardi Tech LLC | Arquitectura de Sistemas e Ingeniería Deep-Tech',
+          de:'Nardi Tech LLC | Systemarchitektur und Deep-Tech-Engineering',
+          fr:'Nardi Tech LLC | Architecture des systèmes et ingénierie Deep-Tech',
+          et:'Nardi Tech LLC | Süsteemiarhitektuur ja süvatehnoloogia'
+        };
+        const metaDescription = document.querySelector('meta[name="description"]');
+        const originalChangeLang = window.changeLang;
+        window.changeLang = function(code) {
+          const lang = supported.includes(code) ? code : 'en';
+          if (typeof originalChangeLang === 'function') originalChangeLang(lang);
+          document.documentElement.lang = lang;
+          document.title = titleByLang[lang];
+          const dict = window.translations || (typeof translations !== 'undefined' ? translations : null);
+          if (metaDescription && dict?.[lang]?.hero_desc) metaDescription.setAttribute('content', dict[lang].hero_desc);
+          document.querySelectorAll('.lang-btn').forEach(btn => {
+            const active = btn.dataset.lang === lang;
+            btn.setAttribute('aria-pressed', String(active));
+            btn.setAttribute('aria-label', ({en:'English',pt:'Português',es:'Español',de:'Deutsch',fr:'Français',et:'Eesti'})[btn.dataset.lang] || btn.dataset.lang);
+          });
+        };
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+        if (menuBtn && menu) {
+          menuBtn.onclick = null; // remove legacy toggle to avoid double execution
+          menuBtn.setAttribute('aria-controls','mobileMenu');
+          menuBtn.setAttribute('aria-expanded','false');
+          menuBtn.setAttribute('aria-label','Open navigation menu');
+          const closeMenu = () => { menu.classList.add('hidden'); menuBtn.setAttribute('aria-expanded','false'); menuBtn.setAttribute('aria-label','Open navigation menu'); };
+          menuBtn.addEventListener('click', () => {
+            const opening = menu.classList.contains('hidden');
+            menu.classList.toggle('hidden', !opening);
+            menuBtn.setAttribute('aria-expanded', String(opening));
+            menuBtn.setAttribute('aria-label', opening ? 'Close navigation menu' : 'Open navigation menu');
+          });
+          menu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+          document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+          window.addEventListener('resize', () => { if (window.innerWidth >= 1024) closeMenu(); });
+        }
+        let preferred = null;
+        try { preferred = localStorage.getItem('narditech_lang_pref'); } catch (_) {}
+        if (!supported.includes(preferred)) {
+          const browser = (navigator.language || 'en').slice(0,2).toLowerCase();
+          preferred = supported.includes(browser) ? browser : 'en';
+        }
+        window.changeLang(preferred);
+      })();
+    </script>
+
 </body>
 </html>
