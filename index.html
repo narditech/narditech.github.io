@@ -89,9 +89,9 @@ h2{font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.15;letter-spacing:-.04em;mar
 .cred{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;padding-top:1.2rem;border-top:1px solid var(--line);font:.75rem "JetBrains Mono",monospace;color:var(--mut)}
 .ct{text-align:center}
 .ct .sub{margin-left:auto;margin-right:auto}
-.ctc{max-width:640px;margin:0 auto;display:grid;gap:1rem;text-align:left}
+.ctc{max-width:760px;margin:0 auto;display:grid;gap:1rem;text-align:left}
 .ctc a{display:flex;align-items:center;gap:1rem;min-width:0}
-.ctc a>span:last-child{min-width:0;overflow-wrap:anywhere}
+.ctc a>span:last-child{min-width:0;overflow-wrap:break-word}
 .ic{flex:none;width:46px;height:46px;border-radius:10px;display:grid;place-items:center;font-weight:800;color:var(--ac);border:1px solid var(--line);background:var(--bg2)}
 .ctc small{display:block;font:.68rem "JetBrains Mono",monospace;text-transform:uppercase;color:var(--mut)}
 .ctc b{font-size:.98rem}
@@ -109,7 +109,7 @@ footer b{color:var(--tx);font-size:.9rem;display:block}
 <div class="bar">
 <a href="#top" class="brand" aria-label="Nardi Tech"><span class="logo">N</span><span style="min-width:0"><b>NARDI TECH<i>LLC</i></b><small data-i18n="sub">Systems & Deep-Tech Advisory</small></span></a>
 <nav class="d" aria-label="Main">
-<a href="#solutions" data-i18n="n1">Core Solutions</a><a href="#track-record" data-i18n="n2">Track Record</a><a href="#architecture" data-i18n="n3">Tech Stack</a><a href="#leadership" data-i18n="n4">Leadership</a>
+<a href="#solutions" data-i18n="n1">Core Solutions</a><a href="#track-record" data-i18n="n2">Track Record</a><a href="#architecture" data-i18n="n3">Tech Stack</a><a href="#leadership" data-i18n="n4">Leadership</a><a href="#engagement" data-i18n="n5">Engagement</a>
 </nav>
 <div class="ctl">
 <select id="lang" aria-label="Language">
@@ -119,7 +119,7 @@ footer b{color:var(--tx);font-size:.9rem;display:block}
 <button id="mb" type="button" aria-expanded="false" aria-controls="m" aria-label="Menu">☰</button>
 </div></div>
 <div id="m">
-<a href="#solutions" data-i18n="n1">Core Solutions</a><a href="#track-record" data-i18n="n2">Track Record</a><a href="#architecture" data-i18n="n3">Tech Stack</a><a href="#leadership" data-i18n="n4">Leadership</a>
+<a href="#solutions" data-i18n="n1">Core Solutions</a><a href="#track-record" data-i18n="n2">Track Record</a><a href="#architecture" data-i18n="n3">Tech Stack</a><a href="#leadership" data-i18n="n4">Leadership</a><a href="#engagement" data-i18n="n5">Engagement</a>
 <a href="#contact" class="btn" data-i18n="cta">Schedule a Review</a>
 </div></div></header>
 
@@ -134,8 +134,8 @@ footer b{color:var(--tx);font-size:.9rem;display:block}
 </div>
 <div class="stats mono">
 <div><b>11+</b><span data-i18n="s1">Years of engineering experience</span></div>
-<div><b class="c">&lt;50ms</b><span data-i18n="s2">Endpoint latency</span></div>
-<div><b>99.99%</b><span data-i18n="s3">Operational resilience</span></div>
+<div><b class="c">B2B</b><span data-i18n="s2">Direct contracts via US LLC</span></div>
+<div><b>USD</b><span data-i18n="s3">Invoicing, no staffing layer</span></div>
 <div><b class="c">Tier-1</b><span data-i18n="s4">Capital markets depth</span></div>
 </div></div></section>
 
@@ -145,7 +145,7 @@ footer b{color:var(--tx);font-size:.9rem;display:block}
 <p class="sub" data-i18n="a_s">Rigorous, high-concurrency, fault-tolerant systems built with formal craftsmanship.</p>
 <div class="g">
 <article class="card sol"><div><span class="num">01</span><h3 data-i18n="a1t">Distributed Backend & Event Streaming</h3><p data-i18n="a1d">Low-latency microservices handling multi-gigabyte ingestion feeds, real-time event streaming pipelines with Apache Kafka, and robust asynchronous database access patterns.</p></div><div class="pills"><span>Python (FastAPI)</span><span>Go</span><span>Apache Kafka</span><span>PostgreSQL (asyncpg)</span></div></article>
-<article class="card sol"><div><span class="num">02</span><h3 data-i18n="a2t">Quantitative & Financial Systems</h3><p data-i18n="a2d">Core valuation logic, proxy voting policy engines, fixed income, FX and derivatives validation, with strict numeric integrity, audit trails and automated reconciliation.</p></div><div class="pills"><span>.NET Core (C#)</span><span>Capital Markets</span><span>Derivatives & FX</span><span>Reconciliation</span></div></article>
+<article class="card sol"><div><span class="num">02</span><h3 data-i18n="a2t">Quantitative & Financial Systems</h3><p data-i18n="a2d">Core valuation logic, shareholder-voting calculation platforms, fixed income, FX and derivatives validation, with strict numeric integrity, audit trails and automated reconciliation.</p></div><div class="pills"><span>.NET Core (C#)</span><span>Capital Markets</span><span>Derivatives & FX</span><span>Reconciliation</span></div></article>
 <article class="card sol"><div><span class="num">03</span><h3 data-i18n="a3t">Deep-Tech & Applied Optimization</h3><p data-i18n="a3d">Advanced algorithmic research taken to production: combinatorial optimization, high-volume schema validation pipelines and machine learning architectures.</p></div><div class="pills"><span>Optimization Algorithms</span><span>Autonomous Systems</span><span>Machine Learning</span><span>Pydantic v2</span></div></article>
 </div></div></section>
 
@@ -154,13 +154,13 @@ footer b{color:var(--tx);font-size:.9rem;display:block}
 <h2 data-i18n="k_t">Selected Consulting & Engineering Engagements</h2>
 <p class="sub" data-i18n="k_s">Strategic technical leadership delivering results for institutional clients under stringent reliability agreements.</p>
 <div class="cases">
-<article class="card"><div class="ch"><span class="lb" data-i18n="k1b">Tier-1 US Financial Technology Infrastructure</span><span class="mk" data-i18n="k1m">NYSE Equity Shareholder Operations</span><h3 data-i18n="k1t">Enterprise Proxy Voting & Policy Calculation Engine</h3></div>
-<p data-i18n="k1d">Architecture and backend microservices for the core proxy voting calculation platform behind institutional voting decisions on major US exchanges. High-throughput REST ingestion of XML, JSON and voting metadata feeds with sub-50 ms latency, and zero-downtime CI/CD with SonarQube, Checkmarx and CAST quality gates.</p>
+<article class="card"><div class="ch"><span class="lb" data-i18n="k1b">Tier-1 US Financial Technology Infrastructure</span><span class="mk" data-i18n="k1m">Confidential client</span><h3 data-i18n="k1t">Enterprise Shareholder-Voting Calculation Platform</h3></div>
+<p data-i18n="k1d">Backend engineering and microservices for an enterprise calculation platform supporting institutional shareholder-voting decisions for US-listed companies. High-throughput REST ingestion of XML, JSON and metadata feeds, strict audit trails, and zero-downtime CI/CD with SonarQube, Checkmarx and CAST quality gates.</p>
 <div class="pills"><span>Python (FastAPI/Flask)</span><span>Apache Kafka</span><span>PostgreSQL (asyncpg)</span><span>AWS (Lambda/S3/Boto3)</span><span>Jenkins & GitFlow</span><span>pytest (90%+ Coverage)</span></div></article>
-<article class="card"><div class="ch"><span class="lb">Global Markets Operations Technology (GMOT)</span><span class="mk" data-i18n="k2m">Tier-1 Investment Banking</span><h3 data-i18n="k2t">Wholesale Banking Trading Desks (Derivatives, FX, Fixed Income)</h3></div>
-<p data-i18n="k2d">Led technical execution and built high-throughput calculation and trade-verification APIs. Delivered reactive operations dashboards in React and TypeScript, enforcing numeric precision, UTC standardization and automated cross-ledger reconciliation with zero discrepancies.</p>
+<article class="card"><div class="ch"><span class="lb">Markets Operations Technology</span><span class="mk" data-i18n="k2m">Tier-1 Investment Banking</span><h3 data-i18n="k2t">Wholesale Banking Trading Desks (Derivatives, FX, Fixed Income)</h3></div>
+<p data-i18n="k2d">Technical delivery of high-throughput calculation and trade-verification APIs. Reactive operations dashboards in React and TypeScript, with numeric precision, UTC standardization and automated cross-ledger reconciliation.</p>
 <div class="pills"><span>.NET Core (C#)</span><span>Python</span><span>React + TypeScript</span><span>SQL Server & PostgreSQL</span><span>Clean Architecture</span></div></article>
-<article class="card"><div class="ch"><span class="lb" data-i18n="k3b">Global Hardware Security & Logistics</span><span class="mk" data-i18n="k3m">International Authentication Leader</span><h3 data-i18n="k3t">Hardware Key Telemetry & Supply Chain Microservices</h3></div>
+<article class="card"><div class="ch"><span class="lb" data-i18n="k3b">Global Hardware Security & Logistics</span><span class="mk" data-i18n="k3m">Confidential client</span><h3 data-i18n="k3t">Hardware Key Telemetry & Supply Chain Microservices</h3></div>
 <p data-i18n="k3d">Built low-latency backend microservices in Go and Python, integrated with Azure Service Bus and PostgreSQL, for real-time cryptographic key telemetry and monitoring of international supply chain distribution.</p>
 <div class="pills"><span>Go (Golang)</span><span>Python</span><span>Azure Service Bus</span><span>React SPA</span><span>Docker & Azure DevOps</span></div></article>
 </div></div></section>
@@ -184,12 +184,23 @@ footer b{color:var(--tx);font-size:.9rem;display:block}
 <div class="cred"><span data-i18n="l_c1">M.Sc. & Ph.D. Candidate (UNICAMP)</span><span data-i18n="l_c2">EU & Brazilian Citizen</span><span data-i18n="l_c3">ANBIMA CPA-20 Certified</span></div>
 </div></div></section>
 
+<section id="engagement"><div class="w">
+<p class="tag" data-i18n="em0">Engagement Model</p>
+<h2 data-i18n="em_t">Contract Directly with Nardi Tech LLC</h2>
+<p class="sub" data-i18n="em_s">No staffing or consulting intermediary between you and the engineer.</p>
+<div class="g w2">
+<article class="card"><span class="num">01</span><h3 data-i18n="e1t">Direct B2B contract</h3><p data-i18n="e1d">Master services agreement plus statements of work with a Wyoming (USA) company, which also operates in Brazil as Nardi Tech Ltda.</p></article>
+<article class="card"><span class="num">02</span><h3 data-i18n="e2t">USD invoicing</h3><p data-i18n="e2d">Clear scope, milestones and monthly invoicing in US dollars, payable by international wire.</p></article>
+<article class="card"><span class="num">03</span><h3 data-i18n="e3t">Flexible formats</h3><p data-i18n="e3d">Fixed-scope projects, monthly retainers, or a dedicated senior engineer embedded in your team.</p></article>
+<article class="card"><span class="num">04</span><h3 data-i18n="e4t">Confidential by default</h3><p data-i18n="e4d">NDA-first engagements. Work product and IP assigned to you under each statement of work.</p></article>
+</div></div></section>
+
 <section id="contact" class="alt ct"><div class="w">
 <p class="tag" data-i18n="x0">Corporate Inquiries</p>
 <h2 data-i18n="x_t">Retain Nardi Tech for Technical Consulting</h2>
 <p class="sub" data-i18n="x_s">Currently taking selected architecture advisory, backend modernization, and mission-critical engineering engagements.</p>
 <div class="ctc">
-<a class="card" href="mailto:fnardifilho@gmail.com"><span class="ic">@</span><span><small data-i18n="x_e">Email Direct</small><b>fnardifilho@gmail.com</b></span></a>
+<a class="card" href="mailto:francisnardi@gmail.com"><span class="ic">@</span><span><small data-i18n="x_e">Email Direct</small><b>francisnardi@gmail.com</b></span></a>
 <a class="card" href="https://linkedin.com/in/francisnardi" target="_blank" rel="noopener noreferrer"><span class="ic">in</span><span><small data-i18n="x_l">Connect</small><b data-i18n="x_v">Executive LinkedIn</b></span></a>
 </div></div></section>
 </main>
@@ -202,119 +213,119 @@ footer b{color:var(--tx);font-size:.9rem;display:block}
 <script>
 const T={
 pt:{mt:"Nardi Tech LLC | Arquitetura de Sistemas e Engenharia de Alto Throughput",md:"A Nardi Tech LLC entrega sistemas distribuídos de alto throughput, motores de cálculo algorítmico e infraestrutura de nuvem de missão crítica.",
-sub:"Consultoria em Sistemas e Deep-Tech",n1:"Soluções",n2:"Casos",n3:"Stack",n4:"Liderança",cta:"Agendar conversa",
+sub:"Consultoria em Sistemas e Deep-Tech",n1:"Soluções",n2:"Casos",n3:"Stack",n4:"Liderança",n5:"Contratação",cta:"Agendar conversa",
 badge:"Arquitetura de sistemas de missão crítica",t1:"Engenharia de",t2:"alto throughput",t3:"para backends distribuídos e infraestrutura financeira.",
 desc:"A Nardi Tech LLC é uma consultoria de engenharia especializada em arquitetura de sistemas, processamento transacional de baixa latência e integração algorítmica avançada para instituições financeiras, líderes em segurança e plataformas de nuvem de alta concorrência.",
-c1:"Contratar consultoria",c2:"Ver projetos",s1:"Anos de experiência em engenharia",s2:"Latência dos endpoints",s3:"Resiliência operacional",s4:"Domínio do mercado de capitais",
+c1:"Contratar consultoria",c2:"Ver projetos",s1:"Anos de experiência em engenharia",s2:"Contratos diretos via LLC dos EUA",s3:"Faturamento, sem intermediária",s4:"Domínio do mercado de capitais",
 a0:"Capacidades",a_t:"Capacidades de arquitetura e engenharia",a_s:"Sistemas rigorosos, de alta concorrência e tolerantes a falhas, construídos com excelência técnica.",
 a1t:"Backend distribuído e streaming de eventos",a1d:"Microsserviços de baixa latência para ingestão de vários gigabytes de dados, pipelines de eventos em tempo real com Apache Kafka e acesso assíncrono robusto a bancos de dados.",
-a2t:"Sistemas quantitativos e financeiros",a2d:"Lógica de precificação, motores de política de votação por procuração, renda fixa, câmbio e derivativos, com integridade numérica rigorosa, trilhas de auditoria e conciliação automatizada.",
+a2t:"Sistemas quantitativos e financeiros",a2d:"Lógica de precificação e valoração, plataformas de apuração de votos de acionistas, renda fixa, câmbio e derivativos, com integridade numérica rigorosa, trilhas de auditoria e conciliação automatizada.",
 a3t:"Deep-tech e otimização aplicada",a3d:"Pesquisa algorítmica avançada levada à produção: otimização combinatória, pipelines de validação de esquemas em alto volume e arquiteturas de machine learning.",
 k0:"Execução comprovada",k_t:"Projetos selecionados de consultoria e engenharia",k_s:"Liderança técnica entregando resultados a clientes institucionais sob acordos rigorosos de confiabilidade.",
-k1b:"Infraestrutura de tecnologia financeira Tier-1 (EUA)",k1m:"Operações de acionistas da NYSE",k1t:"Motor corporativo de cálculo de políticas de votação por procuração",
-k1d:"Arquitetura e microsserviços de backend da plataforma central de cálculo de votação por procuração, que sustenta decisões institucionais nas principais bolsas dos EUA. Ingestão REST de alto throughput de feeds XML, JSON e metadados de votação com latência abaixo de 50 ms, e CI/CD sem downtime com quality gates de SonarQube, Checkmarx e CAST.",
+k1b:"Infraestrutura de tecnologia financeira Tier-1 (EUA)",k1m:"Cliente confidencial",k1t:"Plataforma corporativa de cálculo para votação de acionistas",
+k1d:"Engenharia de backend e microsserviços para uma plataforma corporativa de cálculo que sustenta decisões institucionais de votação de acionistas em empresas listadas nos EUA. Ingestão REST de alto throughput de feeds XML, JSON e metadados, trilhas de auditoria rigorosas e CI/CD sem downtime com quality gates de SonarQube, Checkmarx e CAST.",
 k2m:"Banco de investimento Tier-1",k2t:"Mesas de operação de banco atacadista (derivativos, câmbio e renda fixa)",
-k2d:"Liderança da execução técnica e construção de APIs de cálculo e verificação de operações de alto throughput. Painéis operacionais reativos em React e TypeScript, com precisão numérica, padronização em UTC e conciliação automatizada entre livros, sem discrepâncias.",
-k3b:"Segurança de hardware e logística global",k3m:"Líder internacional em autenticação",k3t:"Telemetria de chaves de hardware e microsserviços de cadeia de suprimentos",
+k2d:"Entrega técnica de APIs de cálculo e verificação de operações de alto throughput. Painéis operacionais reativos em React e TypeScript, com precisão numérica, padronização em UTC e conciliação automatizada entre livros.",
+k3b:"Segurança de hardware e logística global",k3m:"Cliente confidencial",k3t:"Telemetria de chaves de hardware e microsserviços de cadeia de suprimentos",
 k3d:"Microsserviços de backend de baixa latência em Go e Python, integrados ao Azure Service Bus e ao PostgreSQL, para telemetria de chaves criptográficas em tempo real e monitoramento da distribuição logística internacional.",
 t0:"Stack tecnológica",t_t:"Arsenal de engenharia comprovado",t_s:"Linguagens, frameworks e plataformas de implantação usados em produção.",
 c_1:"Back-end",c_2:"Dados e streaming",c_3:"Nuvem e governança",c_4:"Front-end e qualidade",
 l0:"Liderança executiva de engenharia",l_r:"Sócio-administrador e arquiteto principal de sistemas",
 l_b:"Arquiteto de software sênior com mais de 11 anos de experiência em sistemas distribuídos, motores de cálculo financeiro e soluções cloud-native. Mestre e doutorando em Ciência da Computação pela UNICAMP (sistemas adaptativos e otimização com machine learning). Dupla cidadania: europeia (italiana) e brasileira.",
 l_c1:"Mestre e doutorando (UNICAMP)",l_c2:"Cidadão da UE e do Brasil",l_c3:"Certificação ANBIMA CPA-20",
-x0:"Contato institucional",x_t:"Contrate a Nardi Tech para consultoria técnica",x_s:"Atualmente aceitando projetos selecionados de consultoria em arquitetura, modernização de backend e engenharia de missão crítica.",x_e:"E-mail direto",x_l:"Conectar",x_v:"LinkedIn executivo",
+em0:"Modelo de contratação",em_t:"Contrate diretamente a Nardi Tech LLC",em_s:"Sem intermediária de staffing ou consultoria entre você e o engenheiro.",e1t:"Contrato B2B direto",e1d:"Contrato-mestre de serviços e ordens de serviço com uma empresa de Wyoming (EUA), que também opera no Brasil como Nardi Tech Ltda.",e2t:"Faturamento em dólares",e2d:"Escopo, marcos e faturamento mensal claros em dólares americanos, pagáveis por transferência internacional.",e3t:"Formatos flexíveis",e3d:"Projetos de escopo fechado, retainers mensais ou um engenheiro sênior dedicado integrado ao seu time.",e4t:"Confidencial por padrão",e4d:"Engajamentos com NDA desde o início. Entregáveis e propriedade intelectual cedidos a você em cada ordem de serviço.",x0:"Contato institucional",x_t:"Contrate a Nardi Tech para consultoria técnica",x_s:"Atualmente aceitando projetos selecionados de consultoria em arquitetura, modernização de backend e engenharia de missão crítica.",x_e:"E-mail direto",x_l:"Conectar",x_v:"LinkedIn executivo",
 f1:"Registrada em Wyoming, Estados Unidos",f2:"© 2026 Nardi Tech LLC. Todos os direitos reservados."},
 es:{mt:"Nardi Tech LLC | Arquitectura de Sistemas e Ingeniería de Alto Rendimiento",md:"Nardi Tech LLC ofrece sistemas distribuidos de alto rendimiento, motores de cálculo algorítmico e infraestructura en la nube de misión crítica.",
-sub:"Consultoría en Sistemas y Deep-Tech",n1:"Soluciones",n2:"Casos",n3:"Tecnologías",n4:"Liderazgo",cta:"Agendar reunión",
+sub:"Consultoría en Sistemas y Deep-Tech",n1:"Soluciones",n2:"Casos",n3:"Tecnologías",n4:"Liderazgo",n5:"Contratación",cta:"Agendar reunión",
 badge:"Arquitectura de sistemas de misión crítica",t1:"Ingeniería de",t2:"alto rendimiento",t3:"para backends distribuidos e infraestructura financiera.",
 desc:"Nardi Tech LLC es una consultora de ingeniería especializada en arquitectura de sistemas, procesamiento transaccional de baja latencia e integración algorítmica avanzada para instituciones financieras, líderes en seguridad y plataformas en la nube de alta concurrencia.",
-c1:"Contratar asesoría",c2:"Ver proyectos",s1:"Años de experiencia en ingeniería",s2:"Latencia de endpoints",s3:"Resiliencia operativa",s4:"Dominio de mercados de capitales",
+c1:"Contratar asesoría",c2:"Ver proyectos",s1:"Años de experiencia en ingeniería",s2:"Contratos directos vía LLC de EE. UU.",s3:"Facturación, sin intermediarios",s4:"Dominio de mercados de capitales",
 a0:"Capacidades",a_t:"Capacidades de arquitectura e ingeniería",a_s:"Sistemas rigurosos, de alta concurrencia y tolerantes a fallos, construidos con excelencia técnica.",
 a1t:"Backend distribuido y streaming de eventos",a1d:"Microservicios de baja latencia para la ingesta de varios gigabytes de datos, pipelines de eventos en tiempo real con Apache Kafka y acceso asíncrono robusto a bases de datos.",
-a2t:"Sistemas cuantitativos y financieros",a2d:"Lógica de valoración, motores de políticas de voto por representación, renta fija, divisas y derivados, con integridad numérica estricta, trazas de auditoría y conciliación automatizada.",
+a2t:"Sistemas cuantitativos y financieros",a2d:"Lógica de valoración, plataformas de cálculo de votos de accionistas, renta fija, divisas y derivados, con integridad numérica estricta, trazas de auditoría y conciliación automatizada.",
 a3t:"Deep-tech y optimización aplicada",a3d:"Investigación algorítmica avanzada llevada a producción: optimización combinatoria, pipelines de validación de esquemas de alto volumen y arquitecturas de machine learning.",
 k0:"Ejecución probada",k_t:"Proyectos seleccionados de consultoría e ingeniería",k_s:"Liderazgo técnico que entrega resultados a clientes institucionales bajo estrictos acuerdos de fiabilidad.",
-k1b:"Infraestructura de tecnología financiera Tier-1 (EE. UU.)",k1m:"Operaciones de accionistas de la NYSE",k1t:"Motor corporativo de cálculo de políticas de voto por representación",
-k1d:"Arquitectura y microservicios de backend de la plataforma central de cálculo de voto por representación, que respalda decisiones institucionales en las principales bolsas de EE. UU. Ingesta REST de alto rendimiento de feeds XML, JSON y metadatos de votación con latencia inferior a 50 ms, y CI/CD sin tiempo de inactividad con quality gates de SonarQube, Checkmarx y CAST.",
+k1b:"Infraestructura de tecnología financiera Tier-1 (EE. UU.)",k1m:"Cliente confidencial",k1t:"Plataforma corporativa de cálculo para votación de accionistas",
+k1d:"Ingeniería de backend y microservicios para una plataforma corporativa de cálculo que respalda decisiones institucionales de votación de accionistas en empresas cotizadas en EE. UU. Ingesta REST de alto rendimiento de feeds XML, JSON y metadatos, trazas de auditoría estrictas y CI/CD sin tiempo de inactividad con quality gates de SonarQube, Checkmarx y CAST.",
 k2m:"Banca de inversión Tier-1",k2t:"Mesas de negociación de banca mayorista (derivados, divisas y renta fija)",
-k2d:"Liderazgo de la ejecución técnica y construcción de APIs de cálculo y verificación de operaciones de alto rendimiento. Paneles operativos reactivos en React y TypeScript, con precisión numérica, estandarización UTC y conciliación automatizada entre libros sin discrepancias.",
-k3b:"Seguridad de hardware y logística global",k3m:"Líder internacional en autenticación",k3t:"Telemetría de llaves de hardware y microservicios de cadena de suministro",
+k2d:"Entrega técnica de APIs de cálculo y verificación de operaciones de alto rendimiento. Paneles operativos reactivos en React y TypeScript, con precisión numérica, estandarización UTC y conciliación automatizada entre libros.",
+k3b:"Seguridad de hardware y logística global",k3m:"Cliente confidencial",k3t:"Telemetría de llaves de hardware y microservicios de cadena de suministro",
 k3d:"Microservicios de backend de baja latencia en Go y Python, integrados con Azure Service Bus y PostgreSQL, para telemetría de llaves criptográficas en tiempo real y monitoreo de la distribución logística internacional.",
 t0:"Pila tecnológica",t_t:"Arsenal de ingeniería probado",t_s:"Lenguajes, frameworks y plataformas de despliegue utilizados en producción.",
 c_1:"Back-end",c_2:"Datos y streaming",c_3:"Nube y gobernanza",c_4:"Front-end y calidad",
 l0:"Liderazgo ejecutivo de ingeniería",l_r:"Socio gerente y arquitecto principal de sistemas",
 l_b:"Arquitecto de software senior con más de 11 años de experiencia en sistemas distribuidos, motores de cálculo financiero y soluciones cloud-native. Máster y candidato a doctor en Ciencias de la Computación por la UNICAMP (sistemas adaptativos y optimización con machine learning). Doble ciudadanía: europea (italiana) y brasileña.",
 l_c1:"Máster y candidato a doctor (UNICAMP)",l_c2:"Ciudadano de la UE y de Brasil",l_c3:"Certificación ANBIMA CPA-20",
-x0:"Contacto corporativo",x_t:"Contrate a Nardi Tech para consultoría técnica",x_s:"Actualmente aceptamos proyectos selectos de asesoría en arquitectura, modernización de backend e ingeniería de misión crítica.",x_e:"Correo directo",x_l:"Conectar",x_v:"LinkedIn ejecutivo",
+em0:"Modelo de contratación",em_t:"Contrate directamente con Nardi Tech LLC",em_s:"Sin intermediarios de staffing ni consultoría entre usted y el ingeniero.",e1t:"Contrato B2B directo",e1d:"Contrato marco de servicios y órdenes de trabajo con una empresa de Wyoming (EE. UU.), que también opera en Brasil como Nardi Tech Ltda.",e2t:"Facturación en dólares",e2d:"Alcance, hitos y facturación mensual claros en dólares estadounidenses, pagaderos por transferencia internacional.",e3t:"Formatos flexibles",e3d:"Proyectos de alcance cerrado, retainers mensuales o un ingeniero sénior dedicado integrado en su equipo.",e4t:"Confidencial por defecto",e4d:"Contratos con NDA desde el inicio. Entregables y propiedad intelectual cedidos a usted en cada orden de trabajo.",x0:"Contacto corporativo",x_t:"Contrate a Nardi Tech para consultoría técnica",x_s:"Actualmente aceptamos proyectos selectos de asesoría en arquitectura, modernización de backend e ingeniería de misión crítica.",x_e:"Correo directo",x_l:"Conectar",x_v:"LinkedIn ejecutivo",
 f1:"Registrada en Wyoming, Estados Unidos",f2:"© 2026 Nardi Tech LLC. Todos los derechos reservados."},
 de:{mt:"Nardi Tech LLC | Systemarchitektur & Hochdurchsatz-Engineering",md:"Nardi Tech LLC liefert verteilte Hochdurchsatz-Systeme, algorithmische Berechnungsengines und geschäftskritische Cloud-Infrastruktur.",
-sub:"Systemarchitektur & Deep-Tech-Beratung",n1:"Lösungen",n2:"Referenzen",n3:"Technologien",n4:"Führung",cta:"Gespräch vereinbaren",
+sub:"Systemarchitektur & Deep-Tech-Beratung",n1:"Lösungen",n2:"Referenzen",n3:"Technologien",n4:"Führung",n5:"Zusammenarbeit",cta:"Gespräch vereinbaren",
 badge:"Architektur geschäftskritischer Systeme",t1:"Engineering für",t2:"Hochdurchsatz-",t3:"Backends und Finanzinfrastruktur.",
 desc:"Nardi Tech LLC ist ein spezialisiertes Engineering-Unternehmen für Systemarchitektur, Transaktionsverarbeitung mit geringer Latenz und algorithmische Deep-Tech-Integration für Finanzinstitute, Sicherheitsanbieter und hochgradig nebenläufige Cloud-Plattformen.",
-c1:"Beratung anfragen",c2:"Projekte ansehen",s1:"Jahre Engineering-Erfahrung",s2:"Endpoint-Latenz",s3:"Betriebliche Resilienz",s4:"Tiefe im Kapitalmarkt",
+c1:"Beratung anfragen",c2:"Projekte ansehen",s1:"Jahre Engineering-Erfahrung",s2:"Direktverträge über US-LLC",s3:"Abrechnung, ohne Vermittler",s4:"Tiefe im Kapitalmarkt",
 a0:"Kompetenzen",a_t:"Architektur- und Engineering-Kompetenzen",a_s:"Strenge, hochgradig nebenläufige und fehlertolerante Systeme, gebaut nach höchsten handwerklichen Standards.",
 a1t:"Verteiltes Backend & Event-Streaming",a1d:"Microservices mit geringer Latenz für Datenströme im Gigabyte-Bereich, Echtzeit-Event-Pipelines mit Apache Kafka und robuste asynchrone Datenbankzugriffe.",
-a2t:"Quantitative & Finanzsysteme",a2d:"Bewertungslogik, Engines für Stimmrechtsrichtlinien, Zinsprodukte, Devisen und Derivate, mit strikter numerischer Integrität, Prüfpfaden und automatisiertem Abgleich.",
+a2t:"Quantitative & Finanzsysteme",a2d:"Bewertungslogik, Berechnungsplattformen für Aktionärsabstimmungen, Zinsprodukte, Devisen und Derivate, mit strikter numerischer Integrität, Prüfpfaden und automatisiertem Abgleich.",
 a3t:"Deep-Tech & angewandte Optimierung",a3d:"Fortgeschrittene algorithmische Forschung im Produktivbetrieb: kombinatorische Optimierung, Schema-Validierung bei hohem Volumen und Machine-Learning-Architekturen.",
 k0:"Nachgewiesene Umsetzung",k_t:"Ausgewählte Beratungs- und Engineering-Projekte",k_s:"Strategische technische Führung für institutionelle Kunden unter strengen Zuverlässigkeitsvereinbarungen.",
-k1b:"Tier-1 Finanztechnologie-Infrastruktur (USA)",k1m:"NYSE-Aktionärsoperationen",k1t:"Unternehmensplattform zur Berechnung von Stimmrechtsrichtlinien",
-k1d:"Architektur und Backend-Microservices der zentralen Berechnungsplattform für Stimmrechtsausübung, die institutionelle Abstimmungsentscheidungen an den großen US-Börsen trägt. REST-Ingestion mit hohem Durchsatz für XML-, JSON- und Abstimmungs-Metadaten mit unter 50 ms Latenz sowie CI/CD ohne Ausfallzeit mit Quality Gates von SonarQube, Checkmarx und CAST.",
+k1b:"Tier-1 Finanztechnologie-Infrastruktur (USA)",k1m:"Vertraulicher Kunde",k1t:"Unternehmensplattform zur Berechnung von Aktionärsabstimmungen",
+k1d:"Backend-Engineering und Microservices für eine Unternehmensplattform zur Berechnung institutioneller Abstimmungsentscheidungen von Aktionären börsennotierter US-Unternehmen. REST-Ingestion mit hohem Durchsatz für XML-, JSON- und Metadaten-Feeds, strikte Prüfpfade sowie CI/CD ohne Ausfallzeit mit Quality Gates von SonarQube, Checkmarx und CAST.",
 k2m:"Tier-1 Investmentbanking",k2t:"Handelsplätze im Wholesale Banking (Derivate, Devisen, Anleihen)",
-k2d:"Technische Leitung und Entwicklung von Berechnungs- und Handelsprüfungs-APIs mit hohem Durchsatz. Reaktive Operations-Dashboards in React und TypeScript mit numerischer Präzision, UTC-Standardisierung und automatisiertem Abgleich über alle Bücher ohne Abweichungen.",
-k3b:"Hardware-Sicherheit & globale Logistik",k3m:"Internationaler Marktführer für Authentifizierung",k3t:"Telemetrie von Hardware-Schlüsseln & Lieferketten-Microservices",
+k2d:"Technische Umsetzung von Berechnungs- und Handelsprüfungs-APIs mit hohem Durchsatz. Reaktive Betriebs-Dashboards in React und TypeScript, mit numerischer Präzision, UTC-Standardisierung und automatisiertem Abgleich zwischen Büchern.",
+k3b:"Hardware-Sicherheit & globale Logistik",k3m:"Vertraulicher Kunde",k3t:"Telemetrie von Hardware-Schlüsseln & Lieferketten-Microservices",
 k3d:"Backend-Microservices mit geringer Latenz in Go und Python, angebunden an Azure Service Bus und PostgreSQL, für Echtzeit-Telemetrie kryptografischer Schlüssel und die Überwachung der internationalen Lieferkette.",
 t0:"Technologie-Stack",t_t:"Bewährtes Engineering-Arsenal",t_s:"Sprachen, Frameworks und Deployment-Plattformen aus dem Produktivbetrieb.",
 c_1:"Backend",c_2:"Daten & Streaming",c_3:"Cloud & Governance",c_4:"Frontend & Qualität",
 l0:"Technische Geschäftsführung",l_r:"Managing Partner & Leitender Systemarchitekt",
 l_b:"Senior Software Architect mit über 11 Jahren Erfahrung in verteilten Systemen, Finanz-Berechnungsengines und Cloud-nativen Lösungen. Master und Doktorand der Informatik an der UNICAMP (adaptive Systeme und Optimierung durch Machine Learning). Doppelte Staatsbürgerschaft: europäisch (italienisch) und brasilianisch.",
 l_c1:"M.Sc. & Doktorand (UNICAMP)",l_c2:"EU- und brasilianischer Staatsbürger",l_c3:"ANBIMA CPA-20 zertifiziert",
-x0:"Geschäftsanfragen",x_t:"Nardi Tech für technische Beratung beauftragen",x_s:"Aktuell verfügbar für ausgewählte Mandate in Architekturberatung, Backend-Modernisierung und geschäftskritischem Engineering.",x_e:"Direkte E-Mail",x_l:"Vernetzen",x_v:"Executive LinkedIn",
+em0:"Vertragsmodell",em_t:"Direkt mit Nardi Tech LLC beauftragen",em_s:"Kein Personal- oder Beratungsvermittler zwischen Ihnen und dem Ingenieur.",e1t:"Direkter B2B-Vertrag",e1d:"Rahmenvertrag und Leistungsscheine mit einem Unternehmen aus Wyoming (USA), das in Brasilien auch als Nardi Tech Ltda. tätig ist.",e2t:"Abrechnung in US-Dollar",e2d:"Klarer Umfang, Meilensteine und monatliche Rechnungsstellung in US-Dollar, zahlbar per internationaler Überweisung.",e3t:"Flexible Formate",e3d:"Projekte mit festem Umfang, monatliche Retainer oder ein dedizierter Senior-Ingenieur in Ihrem Team.",e4t:"Standardmäßig vertraulich",e4d:"Zusammenarbeit mit NDA von Beginn an. Arbeitsergebnisse und geistiges Eigentum gehen mit jedem Leistungsschein an Sie über.",x0:"Geschäftsanfragen",x_t:"Nardi Tech für technische Beratung beauftragen",x_s:"Aktuell verfügbar für ausgewählte Mandate in Architekturberatung, Backend-Modernisierung und geschäftskritischem Engineering.",x_e:"Direkte E-Mail",x_l:"Vernetzen",x_v:"Executive LinkedIn",
 f1:"Registriert in Wyoming, USA",f2:"© 2026 Nardi Tech LLC. Alle Rechte vorbehalten."},
 fr:{mt:"Nardi Tech LLC | Architecture de systèmes & ingénierie haut débit",md:"Nardi Tech LLC conçoit des systèmes distribués haut débit, des moteurs de calcul algorithmique et une infrastructure cloud critique.",
-sub:"Conseil en systèmes & Deep-Tech",n1:"Solutions",n2:"Réalisations",n3:"Technologies",n4:"Direction",cta:"Prendre rendez-vous",
+sub:"Conseil en systèmes & Deep-Tech",n1:"Solutions",n2:"Réalisations",n3:"Technologies",n4:"Direction",n5:"Collaboration",cta:"Prendre rendez-vous",
 badge:"Architecture de systèmes critiques",t1:"Ingénierie",t2:"haut débit",t3:"pour backends distribués et infrastructure financière.",
 desc:"Nardi Tech LLC est un cabinet d’ingénierie spécialisé dans l’architecture de systèmes, le traitement transactionnel à faible latence et l’intégration algorithmique deep-tech pour les institutions financières, les acteurs de la sécurité et les plateformes cloud à forte concurrence.",
-c1:"Solliciter une expertise",c2:"Découvrir les projets",s1:"Années d’expérience en ingénierie",s2:"Latence des endpoints",s3:"Résilience opérationnelle",s4:"Expertise marchés de capitaux",
+c1:"Solliciter une expertise",c2:"Découvrir les projets",s1:"Années d’expérience en ingénierie",s2:"Contrats directs via LLC américaine",s3:"Facturation, sans intermédiaire",s4:"Expertise marchés de capitaux",
 a0:"Compétences",a_t:"Compétences en architecture et ingénierie",a_s:"Des systèmes rigoureux, à forte concurrence et tolérants aux pannes, conçus selon les règles de l’art.",
 a1t:"Backend distribué & streaming d’événements",a1d:"Microservices à faible latence pour l’ingestion de flux de plusieurs gigaoctets, pipelines d’événements en temps réel avec Apache Kafka et accès asynchrone robuste aux bases de données.",
-a2t:"Systèmes quantitatifs & financiers",a2d:"Logique de valorisation, moteurs de politiques de vote par procuration, taux, change et dérivés, avec intégrité numérique stricte, pistes d’audit et réconciliation automatisée.",
+a2t:"Systèmes quantitatifs & financiers",a2d:"Logique de valorisation, plateformes de calcul des votes d’actionnaires, taux, change et dérivés, avec intégrité numérique stricte, pistes d’audit et réconciliation automatisée.",
 a3t:"Deep-tech & optimisation appliquée",a3d:"Recherche algorithmique avancée mise en production : optimisation combinatoire, pipelines de validation de schémas à grand volume et architectures de machine learning.",
 k0:"Exécution éprouvée",k_t:"Missions de conseil et d’ingénierie sélectionnées",k_s:"Direction technique livrant des résultats à des clients institutionnels sous de strictes exigences de fiabilité.",
-k1b:"Infrastructure fintech Tier-1 (États-Unis)",k1m:"Opérations actionnaires NYSE",k1t:"Moteur de calcul des politiques de vote par procuration",
-k1d:"Architecture et microservices backend de la plateforme centrale de calcul du vote par procuration, qui soutient les décisions institutionnelles sur les grandes places boursières américaines. Ingestion REST haut débit de flux XML, JSON et de métadonnées de vote avec une latence inférieure à 50 ms, et CI/CD sans interruption avec quality gates SonarQube, Checkmarx et CAST.",
+k1b:"Infrastructure fintech Tier-1 (États-Unis)",k1m:"Client confidentiel",k1t:"Plateforme d’entreprise de calcul pour le vote des actionnaires",
+k1d:"Ingénierie backend et microservices pour une plateforme d’entreprise de calcul soutenant les décisions institutionnelles de vote d’actionnaires de sociétés cotées aux États-Unis. Ingestion REST haut débit de flux XML, JSON et de métadonnées, pistes d’audit strictes et CI/CD sans interruption avec quality gates SonarQube, Checkmarx et CAST.",
 k2m:"Banque d’investissement Tier-1",k2t:"Salles de marché de banque de gros (dérivés, change, taux)",
-k2d:"Direction de l’exécution technique et conception d’API de calcul et de vérification des transactions à haut débit. Tableaux de bord opérationnels réactifs en React et TypeScript, avec précision numérique, standardisation UTC et réconciliation automatisée entre registres sans écart.",
-k3b:"Sécurité matérielle & logistique mondiale",k3m:"Leader international de l’authentification",k3t:"Télémétrie de clés matérielles & microservices de chaîne logistique",
+k2d:"Livraison technique d’API de calcul et de vérification des opérations à haut débit. Tableaux de bord opérationnels réactifs en React et TypeScript, avec précision numérique, standardisation UTC et réconciliation automatisée entre registres.",
+k3b:"Sécurité matérielle & logistique mondiale",k3m:"Client confidentiel",k3t:"Télémétrie de clés matérielles & microservices de chaîne logistique",
 k3d:"Microservices backend à faible latence en Go et Python, intégrés à Azure Service Bus et PostgreSQL, pour la télémétrie en temps réel de clés cryptographiques et le suivi de la distribution logistique internationale.",
 t0:"Stack technique",t_t:"Arsenal d’ingénierie éprouvé",t_s:"Langages, frameworks et plateformes de déploiement utilisés en production.",
 c_1:"Back-end",c_2:"Données & streaming",c_3:"Cloud & gouvernance",c_4:"Front-end & qualité",
 l0:"Direction technique exécutive",l_r:"Associé gérant & architecte principal de systèmes",
 l_b:"Architecte logiciel senior forte de plus de 11 ans d’expérience en systèmes distribués, moteurs de calcul financier et solutions cloud-native. Titulaire d’un master et doctorant en informatique à l’UNICAMP (systèmes adaptatifs et optimisation par machine learning). Double nationalité : européenne (italienne) et brésilienne.",
 l_c1:"Master & doctorant (UNICAMP)",l_c2:"Citoyen de l’UE et du Brésil",l_c3:"Certifié ANBIMA CPA-20",
-x0:"Demandes professionnelles",x_t:"Confiez vos projets techniques à Nardi Tech",x_s:"Disponible pour des missions sélectionnées de conseil en architecture, de modernisation backend et d’ingénierie critique.",x_e:"E-mail direct",x_l:"Se connecter",x_v:"LinkedIn exécutif",
+em0:"Modèle de collaboration",em_t:"Contractez directement avec Nardi Tech LLC",em_s:"Aucun intermédiaire de placement ou de conseil entre vous et l’ingénieur.",e1t:"Contrat B2B direct",e1d:"Contrat-cadre de services et ordres de travail avec une société du Wyoming (États-Unis), également active au Brésil sous le nom Nardi Tech Ltda.",e2t:"Facturation en dollars",e2d:"Périmètre, jalons et facturation mensuelle clairs en dollars américains, payables par virement international.",e3t:"Formats flexibles",e3d:"Projets à périmètre fixe, retainers mensuels ou ingénieur senior dédié intégré à votre équipe.",e4t:"Confidentiel par défaut",e4d:"Missions sous NDA dès le départ. Livrables et propriété intellectuelle cédés à vous dans chaque ordre de travail.",x0:"Demandes professionnelles",x_t:"Confiez vos projets techniques à Nardi Tech",x_s:"Disponible pour des missions sélectionnées de conseil en architecture, de modernisation backend et d’ingénierie critique.",x_e:"E-mail direct",x_l:"Se connecter",x_v:"LinkedIn exécutif",
 f1:"Immatriculée au Wyoming, États-Unis",f2:"© 2026 Nardi Tech LLC. Tous droits réservés."},
 et:{mt:"Nardi Tech LLC | Süsteemiarhitektuur ja suure läbilaskevõimega inseneeria",md:"Nardi Tech LLC pakub suure läbilaskevõimega hajussüsteeme, algoritmilisi arvutusmootoreid ja kriitilise tähtsusega pilveinfrastruktuuri.",
-sub:"Süsteemide ja süvatehnoloogia nõustamine",n1:"Lahendused",n2:"Kogemus",n3:"Tehnoloogiad",n4:"Juhtkond",cta:"Broneeri kohtumine",
+sub:"Süsteemide ja süvatehnoloogia nõustamine",n1:"Lahendused",n2:"Kogemus",n3:"Tehnoloogiad",n4:"Juhtkond",n5:"Koostöö",cta:"Broneeri kohtumine",
 badge:"Kriitilise tähtsusega süsteemide arhitektuur",t1:"Suure läbilaskevõimega",t2:"hajus-backendide",t3:"ja finantsinfrastruktuuri inseneeria.",
 desc:"Nardi Tech LLC on spetsialiseerunud inseneriettevõte, mis pakub süsteemiarhitektuuri, madala latentsusega tehingutöötlust ja süvatehnoloogilist algoritmide integreerimist finantsasutustele, turvalahenduste pakkujatele ja suure samaaegsusega pilveplatvormidele.",
-c1:"Telli nõustamine",c2:"Tutvu projektidega",s1:"Aastat inseneeriakogemust",s2:"Lõpp-punktide latentsus",s3:"Töökindlus",s4:"Kapitaliturgude kompetents",
+c1:"Telli nõustamine",c2:"Tutvu projektidega",s1:"Aastat inseneeriakogemust",s2:"Otselepingud USA LLC kaudu",s3:"Arveldus, ilma vahendajata",s4:"Kapitaliturgude kompetents",
 a0:"Võimekused",a_t:"Arhitektuuri- ja inseneeriavõimekus",a_s:"Ranged, suure samaaegsusega ja tõrketaluvad süsteemid, mis on ehitatud kõrgeimate kvaliteedistandardite järgi.",
 a1t:"Hajus-backend ja sündmusvoogude töötlus",a1d:"Madala latentsusega mikroteenused mitme gigabaidiste andmevoogude vastuvõtuks, reaalajas sündmuste torujuhtmed Apache Kafkaga ja töökindel asünkroonne andmebaasipöördus.",
-a2t:"Kvantitatiivsed ja finantssüsteemid",a2d:"Hindamisloogika, volitusel hääletamise poliitikamootorid, fikseeritud tulumääraga instrumendid, valuuta ja tuletisinstrumendid range numbrilise terviklusega, auditijälgede ja automaatse ühitamisega.",
+a2t:"Kvantitatiivsed ja finantssüsteemid",a2d:"Hindamisloogika, aktsionäride hääletuste arvutusplatvormid, intressi-, valuuta- ja tuletisinstrumendid, range numbriline terviklus, auditijäljed ja automatiseeritud kooskõlastus.",
 a3t:"Süvatehnoloogia ja rakenduslik optimeerimine",a3d:"Täiustatud algoritmiuuringud tootmiskeskkonda: kombinatoorne optimeerimine, suuremahulised skeemivalideerimise torujuhtmed ja masinõppe arhitektuurid.",
 k0:"Tõestatud teostus",k_t:"Valitud nõustamis- ja inseneeriaprojektid",k_s:"Strateegiline tehniline juhtimine, mis annab tulemusi institutsionaalsetele klientidele rangete töökindlusnõuete all.",
-k1b:"USA Tier-1 finantstehnoloogia infrastruktuur",k1m:"NYSE aktsionäride toimingud",k1t:"Ettevõtte volitusel hääletamise poliitikate arvutusmootor",
-k1d:"Arhitektuur ja backend-mikroteenused volitusel hääletamise arvutusplatvormile, mis toetab institutsionaalseid hääletusotsuseid USA suurimatel börsidel. Suure läbilaskevõimega REST-vastuvõtt XML-, JSON- ja hääletusmetaandmete voogudele alla 50 ms latentsusega ning katkestusteta CI/CD SonarQube’i, Checkmarxi ja CAST kvaliteedivärava abil.",
+k1b:"USA Tier-1 finantstehnoloogia infrastruktuur",k1m:"Konfidentsiaalne klient",k1t:"Ettevõtte aktsionäride hääletuse arvutusplatvorm",
+k1d:"Backend-arendus ja mikroteenused ettevõtte arvutusplatvormile, mis toetab institutsionaalseid aktsionäride hääletusotsuseid USA börsiettevõtetes. Suure läbilaskevõimega REST-vastuvõtt XML-, JSON- ja metaandmete voogudele, ranged auditijäljed ning katkestusteta CI/CD SonarQube’i, Checkmarxi ja CAST kvaliteedivärava abil.",
 k2m:"Tier-1 investeerimispank",k2t:"Hulgipanganduse kauplemislauad (tuletisinstrumendid, valuuta, fikseeritud tulu)",
-k2d:"Tehnilise teostuse juhtimine ning suure läbilaskevõimega arvutus- ja tehingukontrolli API-de arendus. Reaktiivsed operatsioonipaneelid Reactis ja TypeScriptis, numbriline täpsus, UTC standardiseerimine ning automaatne raamatutevaheline ühitamine ilma lahknevusteta.",
-k3b:"Riistvaraline turvalisus ja globaalne logistika",k3m:"Rahvusvaheline autentimise liider",k3t:"Riistvaravõtmete telemeetria ja tarneahela mikroteenused",
+k2d:"Suure läbilaskevõimega arvutus- ja tehingukontrolli API-de tehniline teostus. Reaktiivsed operatiivpaneelid Reactis ja TypeScriptis, numbriline täpsus, UTC standardiseerimine ja automatiseeritud kooskõlastus raamatute vahel.",
+k3b:"Riistvaraline turvalisus ja globaalne logistika",k3m:"Konfidentsiaalne klient",k3t:"Riistvaravõtmete telemeetria ja tarneahela mikroteenused",
 k3d:"Madala latentsusega backend-mikroteenused Go ja Pythoniga, integreeritud Azure Service Busi ja PostgreSQL-iga, krüptovõtmete reaalajas telemeetriaks ning rahvusvahelise tarneahela jälgimiseks.",
 t0:"Tehnoloogiapakk",t_t:"Tootmises end tõestanud tehnoloogiad",t_s:"Tootmiskeskkonnas kasutatud keeled, raamistikud ja juurutusplatvormid.",
 c_1:"Backend",c_2:"Andmed ja voogedastus",c_3:"Pilv ja juhtimine",c_4:"Frontend ja kvaliteet",
 l0:"Tehniline tippjuhtimine",l_r:"Juhtivpartner ja peaarhitekt",
 l_b:"Vanemtarkvaraarhitekt, kellel on üle 11 aasta kogemust hajussüsteemide, finantsarvutusmootorite ja pilvepõhiste lahenduste vallas. Magistrikraad ja doktorant arvutiteaduses UNICAMPis (adaptiivsed süsteemid ja masinõppel põhinev optimeerimine). Topeltkodakondsus: Euroopa (Itaalia) ja Brasiilia.",
 l_c1:"M.Sc. ja doktorant (UNICAMP)",l_c2:"ELi ja Brasiilia kodanik",l_c3:"ANBIMA CPA-20 sertifikaat",
-x0:"Äripäringud",x_t:"Telli Nardi Techilt tehniline nõustamine",x_s:"Võtame vastu valitud projekte arhitektuurinõustamise, backendi moderniseerimise ja kriitilise tähtsusega inseneeria valdkonnas.",x_e:"Otsene e-post",x_l:"Ühenduse loomine",x_v:"Executive LinkedIn",
+em0:"Koostöömudel",em_t:"Tellige otse Nardi Tech LLC-lt",em_s:"Teie ja inseneri vahel puudub personali- või konsultatsioonivahendaja.",e1t:"Otsene B2B leping",e1d:"Raamleping ja töökorraldused Wyomingi (USA) ettevõttega, mis tegutseb Brasiilias ka nime all Nardi Tech Ltda.",e2t:"Arveldus USA dollarites",e2d:"Selge maht, vahe-etapid ja igakuine arveldus USA dollarites, makstav rahvusvahelise ülekandega.",e3t:"Paindlikud formaadid",e3d:"Fikseeritud mahuga projektid, igakuised retainerid või pühendunud vanemarendaja teie meeskonnas.",e4t:"Vaikimisi konfidentsiaalne",e4d:"Koostöö algab NDA-ga. Töötulemused ja intellektuaalomand lähevad teile üle iga töökorraldusega.",x0:"Äripäringud",x_t:"Telli Nardi Techilt tehniline nõustamine",x_s:"Võtame vastu valitud projekte arhitektuurinõustamise, backendi moderniseerimise ja kriitilise tähtsusega inseneeria valdkonnas.",x_e:"Otsene e-post",x_l:"Ühenduse loomine",x_v:"Executive LinkedIn",
 f1:"Registreeritud Wyomingis, USA-s",f2:"© 2026 Nardi Tech LLC. Kõik õigused kaitstud."}
 };
 (function(){
